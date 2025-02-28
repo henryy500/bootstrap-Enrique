@@ -1,0 +1,56 @@
+<html class="html-listadoEnrique">
+<head>
+    <title>Usuario Enrique</title>
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+    <body>
+        <div class="html">
+        <h1>Enrique</h1>
+        <div class="datos-resumidos">
+        <p>Datos resumidos y más relevantes del usuario Enrique: </p>
+        <div class="datos">
+            <div class="dato1">
+        <p> El usuario Enrique nació el 1 de noviembre de 2004</p>
+                </div>
+                <div class="dato2">
+        <p> Su email es enriquesauramartinez@gmail.com</p>
+        </div>
+        <div class="dato3">
+        <p> Su país de residencia es España</p>
+        </div>
+        </div>
+        </div>
+    <div class="publicaciones">
+        <h2>Listado de publicaciones</h2>
+       
+            <table class="tablaPublicaciones" id="tablaPublicaciones">
+                <thead>
+                    <tr>
+                        <th>Publicaciones</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr id="publicacion1">
+                        <td>Formatos de imagenes</td>
+                        <td>01/01/2025</td>
+                        <td>
+                            <div class="acciones">
+                                <a href="#" class="botonBorrar" onclick="borrarPublicacion('publicacion1')">Borrar</a>
+                                <a href="#" class="botonBloquear" onclick="bloquearPublicacion(this)">Bloquear</a>
+                                <a href="#" class="botonDesbloquear" onclick="desbloquearPublicacion(this)" style="display:none;">Desbloquear</a>
+                                <a href="/dist/visualizarPublicacion/formatoImagenes.html" class="botonVisualizar">Visualizar</a>
+                            </div>
+                        </td>
+                        
+                    </tr>
+                    </tbody>
+                    </table>
+                    </div>
+                   <script src="js/bloquearyDesbloquearPublicacion.js"></script>  <!-- Archivo para desbloquear y bloquear publicacion -->   
+                    <script src="js/borrarPublicacion.js"></script><!-- Archivo para borrar la publicacion -->
+                </body>
+
+</html>

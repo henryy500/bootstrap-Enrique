@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Usuario Ivan</title>
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+    <body>
+        <div class="html">
+        <h1>Ivan</h1>
+        <div class="datos-resumidos">
+        <p>Datos resumidos y más relevantes del usuario Ivan: </p>
+        <div class="datos">
+            <div class="dato1">
+        <p> El usuario Ivan nació el 22 de octubre de 2002</p>
+                </div>
+                <div class="dato2">
+        <p> Su email es ivangarcia@gmail.com</p>
+        </div>
+        <div class="dato3">
+        <p> Su país de residencia es España</p>
+        </div>
+        </div>
+        
+    <div class="publicaciones">
+        <h2>Listado de publicaciones</h2>
+       
+            <table class="tablaPublicaciones" id="tablaPublicaciones">
+                <thead>
+                    <tr>
+                        <th>Publicaciones</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr id="publicacion1">
+                        <td>Formatos de imagenes</td>
+                        <td>01/01/2025</td>
+                        <td>
+                            <div class="acciones">
+                                <a href="#" class="botonBorrar" onclick="borrarPublicacion('publicacion1')">Borrar</a>
+                                <a href="#" class="botonBloquear" onclick="bloquearPublicacion(this)">Bloquear</a>
+                                <a href="#" class="botonDesbloquear" onclick="desbloquearPublicacion(this)" style="display:none;">Desbloquear</a>
+                                <a href="/dist/visualizarPublicacion/FiltrosCSS.html" class="botonVisualizar">Visualizar</a>
+                            </div>
+                        </td>
+                        
+                    </tr>
+                    </tbody>
+                    </table>
+                    </div>
+                    <script src="js/bloquearyDesbloquearPublicacion.js"></script>
+                    <script src="js/borrarPublicacion.js"></script>
+    </body>
+
+</html>
