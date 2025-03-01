@@ -22317,8 +22317,14 @@ input[type=date] {
     justify-content: center;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .menu-navegacion {
-  background-color: #333;
+  background-color: #007BFF;
   overflow: hidden;
   width: 100%;
   display: flex;
@@ -22337,6 +22343,8 @@ input[type=date] {
   align-items: center;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 .menu-navegacion ul li {
   display: inline-block;
@@ -22351,7 +22359,7 @@ input[type=date] {
   font-size: 18px;
 }
 .menu-navegacion ul li a:hover {
-  background-color: #575757;
+  background-color: #0056b3;
 }
 
 .icono-publicacion1 {
@@ -22382,7 +22390,7 @@ input[type=date] {
 }
 
 .html-formatoImagenes h1, .html-formatoImagenes .h1, h2, .h2 {
-  color: #333;
+  color: #007BFF;
 }
 
 .jpg {
@@ -22415,7 +22423,7 @@ input[type=date] {
 }
 .ejemplo-imagenjpg.jpg p {
   margin-top: 10px;
-  color: #333;
+  color: #007BFF;
 }
 
 .png {
@@ -22451,7 +22459,7 @@ input[type=date] {
 }
 .ejemplo-png.png p {
   margin-top: 10px;
-  color: #333;
+  color: #007BFF;
 }
 
 .gif {
@@ -22485,7 +22493,7 @@ input[type=date] {
 }
 .gif-imagen.gif p {
   margin-top: 10px;
-  color: #333;
+  color: #007BFF;
 }
 
 .webp {
@@ -22519,7 +22527,7 @@ input[type=date] {
 }
 .ejemplo-webp.webp p {
   margin-top: 10px;
-  color: #333;
+  color: #007BFF;
 }
 
 .JPEG-texto, .png-texto, .gif-texto, .webp-texto {
@@ -22545,7 +22553,7 @@ input[type=date] {
 }
 
 .icono-publicacion1 {
-  background-color: #333;
+  background-color: #007BFF;
   padding: 5px 0 5px 40px;
 }
 
@@ -23159,7 +23167,7 @@ input[type=date] {
     flex-direction: column !important;
     align-items: center;
     justify-content: center;
-    background-color: #333;
+    background-color: #007BFF;
     position: absolute;
     top: 0;
     right: 0;

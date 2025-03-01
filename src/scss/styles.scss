@@ -488,14 +488,25 @@ $paddingFormatosImagen:20px;
 $paddingbotonAdmin:10px 10px;
 $background-colorBoton:green;
 $font-family: Arial, sans-serif;
-$font-size: 16px;
-$font-size-large: 18px;    // Tamaño de fuente en pantallas grandes
-$font-size-small: 14px;  
 
 // Mixin para bordes
 @mixin border-style($color, $radius: $border-radius) {
   border: 2px solid $color;
   border-radius: $radius;
+}
+
+// Variables (puedes personalizarlas)
+$primary-color: #007BFF;   // Color principal (puedes cambiarlo)
+$hover-color: #0056b3;     // Color cuando pasa el mouse por encima (puedes cambiarlo)
+$font-size: 16px;          // Tamaño de fuente base
+$font-size-large: 18px;    // Tamaño de fuente en pantallas grandes
+$font-size-small: 14px;    // Tamaño de fuente en pantallas pequeñas
+
+// Estilos globales y resets
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 // Estilo del menú de navegación
@@ -522,23 +533,27 @@ $font-size-small: 14px;
     align-items: center;
     padding: 0;
     margin: 0;
-  }
+    flex-wrap: wrap; // Hace que los elementos se acomoden en una nueva línea si no hay suficiente espacio
+    max-width: 100%; // Se asegura de que los elementos no se salgan de la pantalla
 
-  ul li {
-    display: inline-block;
-    margin-right: 30px; // Espaciado entre los elementos del menú
-  }
+    // Estilo de los elementos de lista (li)
+    li {
+      display: inline-block;
+      margin-right: 30px;
+    }
 
-  ul li a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-    font-size: $font-size-large;
-    
-    &:hover {
-      background-color: $hover-color;
+    // Estilo de los enlaces
+    li a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      font-size: $font-size-large;
+      
+      &:hover {
+        background-color: $hover-color;
+      }
     }
   }
 }
