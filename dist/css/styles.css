@@ -22949,7 +22949,7 @@ input[type=date] {
 .image-ejemplo {
   width: 20vw;
   height: 20vh;
-  background-image: url("/dist/visualizarPublicacion/image-ejemplo.jpg");
+  background-image: url("../assets/image-ejemplo.jpg");
   background-size: cover;
   transition: filter 0.3s ease;
   filter: brightness(1) saturate(1);
