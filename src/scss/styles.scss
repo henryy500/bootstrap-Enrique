@@ -235,112 +235,105 @@ th,td{
     }
 
 }
-//Variables para el formulario
+// Variables de color y tipografía
 $color-base: #3498db;
 $color-darker: darken($color-base, 15%);
-$color-botonFormulario:(primary:white);
-$font-size-formulario:1.5rem;
-$font-weight-formulario:bold;
-//Estilos para el formulario tras añadir y editar usuario
-.formulario{
-  width:100%;
-  height:100%;
-  background-color:$color-darker;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
- 
+$color-boton: #3498db;
+$color-fondo: #f4f4f4;
+$color-boton-hover: #2980b9;
+$font-size: 1.2rem;
+$font-weight: bold;
+$border-radius: 10px;
+$padding-input: 15px;
 
-  &.formulario h1{
-    font-weight:$font-weight-formulario;
-  }
-}
-fieldset{
-  display:flex;
+// Fondo del formulario
+$form-background: #ecf0f1;
+
+// Diseño del formulario principal
+.formulario {
+  width: 100%;
+  max-width: 400px;
+  background-color: $form-background;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  max-width:100vw;
-  transform:scale(0.65);
-  
-}
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 
-label{
-  text-align:start;
-  font-size:$font-size-formulario;
-  font-weight:$font-weight-formulario;
-}
-
-.componente-texto-formulario{
-  display:flex;
-  padding:0 0 20px 30px;
-  width:250px;
-  
-  
-}
-
-input[type="email"]{
-  width:500px;
-  padding-top:20px;
-  
-}
-
-input[type="date"]{
-  width:140px;
-  padding:10px 0 10px 0;
-  
-}
-
-//Estilos para el boton de añadir usaurio
-.formulario button{
-  width:95px;
-  border:2px solid black;
-  border-radius:50px;
-  padding:20px 0 20px 0;
-  
-  background-color: map-get($color-botonFormulario,primary);
-}
-
-.formulario button:hover{
-  background-color: black;
-  color:map-get($color-botonFormulario,primary);
-  transform:scale(1.1);
-
-}
-
-//Variable para este formulario
-$color-fondo-formularioEditar:orange;
-
-//Le cambiamos el fondo del html del formulario para editar el usuario
-.formulario2{
-  width:100%;
-  height:100%;
-  background-color:lighten($color-fondo-formularioEditar,30%);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-
-  &.formulario h1{
-    font-weight:$font-weight-formulario;
+  h1 {
+    font-size: 2rem;
+    font-weight: $font-weight;
+    color: $color-base;
+    margin-bottom: 20px;
   }
 }
 
-.formulario2 button{
-  width:95px;
-  border:2px solid black;
-  border-radius:50px;
-  padding:20px 0 20px 0;
-  margin-top:-10px;
-  background-color: map-get($color-botonFormulario,primary);
+// Estilos para el campo de texto
+.componente-texto-formulario {
+  width: 100%;
+  padding: $padding-input;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  color: #333;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: $color-base;
+    outline: none;
+  }
 }
 
-.formulario2 button:hover{
-  background-color: black;
-  color:map-get($color-botonFormulario,primary);
-  transform:scale(1.1);
-
+// Estilo de los labels
+label {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 5px;
+  align-self: flex-start;
 }
 
+// Estilos para el botón
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: $font-weight;
+  color: white;
+  background-color: $color-boton;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: $color-boton-hover;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    background-color: $color-darker;
+  }
+}
+
+// Estilos específicos para el campo de email y fecha de nacimiento
+input[type="email"], input[type="date"] {
+  width: 100%;
+}
+
+// Para la segunda versión de formulario (editar usuario)
+.formulario2 {
+  background-color: lighten($color-base, 30%);
+}
+
+// Sombra suave para el campo del formulario cuando está enfocado
+input:focus {
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.6);
+}
 
 //Estilos para el boton de visualizar
 .botonVisualizar{

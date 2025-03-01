@@ -1,49 +1,36 @@
 <html>
 <head>
-    <title>Editar usuario</title>
+    <title>Añadir usuario</title>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<div class="formulario2">
-    
+<div class="formulario">
     <fieldset>
+        <h1>Editar Usuario</h1>
+        <label for="nombre">Nombre (obligatorio)</label>
+        <input type="text" id="nombre" class="componente-texto-formulario" placeholder="Nombre">
         
-        <br>
-        <label>Nombre (obligatorio)</label>
-        <br>
-        <label>Nombre:</label>
-        <br>
-        <input type="text" class="componente-texto-formulario">
-        <br>
-        <label>Apellidos:</label>
-        <br>
-        <input type="text" class="componente-texto-formulario">
-        <br>
-        <label>Correo electronico (obligatorio):</label>
-        <br>
-        <input type="email">
-        <br>
-        <label>Fecha de nacimiento(obligatorio):</label>
-        <br>
-        <input type="date">
-        <br>
-        <label>País de residencia:</label>
-        <br>
-        <input type="text" class="componente-texto-formulario">
-        <br>
-        <label>Ciudad de residencia:</label>
-        <br>
-        <input type="text" class="componente-texto-formulario">
-        <br>
-        <label>Contraseña:</label>
-        <br>
-        <input type="password" class="componente-texto-formulario">
-        <br>
-        <label>Repetir contraseña:</label>
-        <br>
-        <input type="password" class="componente-texto-formulario">
-        <br><br>
-        <button>Editar</button>
-
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" class="componente-texto-formulario" placeholder="Apellidos">
+        
+        <label for="email">Correo electrónico (obligatorio):</label>
+        <input type="email" id="email" placeholder="correo@dominio.com">
+        
+        <label for="fecha-nacimiento">Fecha de nacimiento (obligatorio):</label>
+        <input type="date" id="fecha-nacimiento">
+        
+        <label for="pais">País de residencia:</label>
+        <input type="text" id="pais" class="componente-texto-formulario" placeholder="País">
+        
+        <label for="ciudad">Ciudad de residencia:</label>
+        <input type="text" id="ciudad" class="componente-texto-formulario" placeholder="Ciudad">
+        
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" class="componente-texto-formulario" placeholder="Contraseña">
+        
+        <label for="repetir-contraseña">Repetir contraseña:</label>
+        <input type="password" id="repetir-contraseña" class="componente-texto-formulario" placeholder="Repetir contraseña">
+        
+        <button id="btnAñadir">Editar</button>
     </fieldset>
 </div>
 </html>

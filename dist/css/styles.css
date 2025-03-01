@@ -22123,86 +22123,77 @@ th, td {
 
 .formulario {
   width: 100%;
-  height: 100%;
-  background-color: #1d6fa5;
+  max-width: 400px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
-.formulario.formulario h1, .formulario.formulario .h1 {
+.formulario h1, .formulario .h1 {
+  font-size: 2rem;
   font-weight: bold;
-}
-
-fieldset {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 100vw;
-  transform: scale(0.65);
-}
-
-label {
-  text-align: start;
-  font-size: 1.5rem;
-  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 20px;
 }
 
 .componente-texto-formulario {
-  display: flex;
-  padding: 0 0 20px 30px;
-  width: 250px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+.componente-texto-formulario:focus {
+  border-color: #3498db;
+  outline: none;
 }
 
-input[type=email] {
-  width: 500px;
-  padding-top: 20px;
+label {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 5px;
+  align-self: flex-start;
 }
 
-input[type=date] {
-  width: 140px;
-  padding: 10px 0 10px 0;
-}
-
-.formulario button {
-  width: 95px;
-  border: 2px solid black;
-  border-radius: 50px;
-  padding: 20px 0 20px 0;
-  background-color: white;
-}
-
-.formulario button:hover {
-  background-color: black;
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
   color: white;
-  transform: scale(1.1);
+  background-color: #3498db;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+button:active {
+  background-color: #1d6fa5;
+}
+
+input[type=email], input[type=date] {
+  width: 100%;
 }
 
 .formulario2 {
-  width: 100%;
-  height: 100%;
-  background-color: #ffdb99;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.formulario2.formulario h1, .formulario2.formulario .h1 {
-  font-weight: bold;
+  background-color: #b6daf2;
 }
 
-.formulario2 button {
-  width: 95px;
-  border: 2px solid black;
-  border-radius: 50px;
-  padding: 20px 0 20px 0;
-  margin-top: -10px;
-  background-color: white;
-}
-
-.formulario2 button:hover {
-  background-color: black;
-  color: white;
-  transform: scale(1.1);
+input:focus {
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.6);
 }
 
 .botonVisualizar {
@@ -22211,7 +22202,7 @@ input[type=date] {
   color: white;
   background-color: #0004ff;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-decoration: none;
@@ -22269,7 +22260,7 @@ input[type=date] {
 
 .dato1, .dato2, .dato3 {
   border: 2px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .dato1 p, .dato2 p, .dato3 p {
