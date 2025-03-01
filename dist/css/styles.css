@@ -22137,7 +22137,6 @@ fieldset {
 
 label {
   text-align: start;
-  margin-top: -16px;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -22146,19 +22145,16 @@ label {
   display: flex;
   padding: 0 0 20px 30px;
   width: 250px;
-  margin-top: -15px;
 }
 
 input[type=email] {
   width: 500px;
   padding-top: 20px;
-  margin-top: -11px;
 }
 
 input[type=date] {
   width: 140px;
   padding: 10px 0 10px 0;
-  margin-top: -9px;
 }
 
 .formulario button {
@@ -22166,7 +22162,6 @@ input[type=date] {
   border: 2px solid black;
   border-radius: 50px;
   padding: 20px 0 20px 0;
-  margin-top: -25px;
   background-color: white;
 }
 
@@ -22194,7 +22189,6 @@ input[type=date] {
   border-radius: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-top: -25px;
   background-color: white;
 }
 
