@@ -1130,6 +1130,7 @@ $font-family: Arial, sans-serif;
   .menu-navegacionPropiedadesCSS{
    padding-left:80px;
    text-align:center;
+   
   }
 
   .titulo-propiedadesCSS{
@@ -1139,6 +1140,7 @@ $font-family: Arial, sans-serif;
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
+    
     margin:2em;
   }
 
@@ -1148,6 +1150,7 @@ $font-family: Arial, sans-serif;
     align-items:center;
     margin:2em;
   }
+
   .boton-admin2{
     display:flex;
     justify-content:center;
@@ -1222,7 +1225,7 @@ $padding-secciones:40px;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  background-image: url('/dist/visualizarPublicacion/fondoseccion1publicacion3.jpg');
+  background-image: url('../assets/fondoseccion1publicacion3.jpg');
   background-size:cover;
   filter: brightness(110%);
 
