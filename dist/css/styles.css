@@ -23164,21 +23164,33 @@ input[type=date] {
   }
 }
 @media (max-width: 400px) {
-  .menu-navegacion nav {
+  .menu-hamburguesa {
+    display: block; /* Mostrar icono hamburguesa */
+  }
+  .menu-navegacion ul {
     display: none;
   }
-  .menu-navegacion.open nav {
+  .menu-navegacion.open nav ul {
     display: flex;
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #333;
-    position: absolute;
+    background-color: #666666;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 100vh;
     padding: 20px;
+  }
+  .menu-navegacion.open ul li {
+    margin: 15px 0;
+  }
+  .menu-navegacion.open ul li a {
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
   }
 }
 

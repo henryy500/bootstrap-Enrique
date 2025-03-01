@@ -155,24 +155,20 @@
         <p>Cada formato de imagen tiene sus ventajas y desventajas. La elección del formato depende de factores como el tipo de imagen, la calidad deseada y el tamaño del archivo. Por ejemplo, si estás trabajando con fotografías, el formato JPEG es una excelente opción. Si necesitas imágenes con transparencias o gráficos con alta calidad, el PNG es el indicado. Y para animaciones, el GIF sigue siendo una opción popular, aunque los formatos más nuevos como WebP ofrecen una alternativa más eficiente.</p>
     </div>
     <div class="boton-admin">
-        <a href="/dist/index.html" class="botonA">Pulsa aqui para volver al admin</a>
+        <a href="index.html" class="botonA">Pulsa aqui para volver al admin</a>
     </div>
     </section>
     </div>
     
     </footer>
     <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu-navegacion');
-            const hamburger = document.querySelector('.menu-hamburguesa');
-            
-      
-      
-            menu.classList.toggle('open');
-            hamburger.classList.toggle('open');
-            imagenIcono.classList.toggle('hidden');
-        }
-    </script>
+    function toggleMenu() {
+  const menu = document.querySelector('.menu-navegacion');
+  const hamburger = document.querySelector('.menu-hamburguesa');
+  menu.classList.toggle('open'); // Alterna la clase 'open' para mostrar el menú
+  hamburger.classList.toggle('open'); // Alterna la clase 'open' para transformar el icono
+}
 
+</script>
 </body>
 </html>

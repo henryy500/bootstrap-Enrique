@@ -541,14 +541,14 @@ $font-family: Arial, sans-serif;
   align-items: center;
   padding: 0;
   margin: 0;
-  flex-wrap: wrap; // Hace que los elementos se acomoden automáticamente a la siguiente línea si no caben
-  max-width: 100%; // Evita que los elementos se desborden fuera de la pantalla
+  flex-wrap: wrap; 
+  max-width: 100%; 
 }
 
 // Estilo de cada elemento de la lista (espaciado entre los elementos del menú)
 .menu-navegacion ul li {
   display: inline-block;
-  margin-right: 30px; // Ajusta el espaciado entre los elementos
+  margin-right: 30px; 
 }
 
 // Estilos para el icono de publicación (si tienes una imagen de icono)
@@ -1526,25 +1526,45 @@ $padding-secciones:40px;
   }
 }
 
-//Añadimos el menu hamburguesa para la primera publicacion
+// Media Query para pantallas menores a 400px
 @media (max-width: 400px) {
-  .menu-navegacion nav {
-      display: none; 
+
+  // Mostrar el ícono de hamburguesa
+  .menu-hamburguesa {
+    display: block; /* Mostrar icono hamburguesa */
   }
 
-  .menu-navegacion.open nav {
-      display: flex;
-      flex-direction: column !important; 
-      align-items: center; 
-      justify-content: center; 
-      background-color: $primary-color;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100vh; 
-      padding: 20px;
+  // Inicialmente ocultar el menú
+  .menu-navegacion ul {
+    display: none;
+    
   }
 
-  
+  // Mostrar el menú cuando se activa la clase "open"
+  .menu-navegacion.open nav ul{
+    display: flex; 
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    background-color: lighten(black,40%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height:100vh;
+    padding: 20px;
+    
+  }
+
+  // Ajustar los elementos de la lista dentro del menú
+  .menu-navegacion.open ul li {
+    margin: 15px 0;
+  }
+
+  .menu-navegacion.open ul li a {
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
 }
