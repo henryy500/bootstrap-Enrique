@@ -22960,7 +22960,7 @@ input[type=date] {
 
 .container-propiedades {
   width: 100%;
-  background-image: url("/dist/visualizarPublicacion/seccionpropiedadescss.png");
+  background-image: url("../assets/seccionpropiedadescss.png");
   background-size: cover;
   padding: 40px 0 45px 40px;
   -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
