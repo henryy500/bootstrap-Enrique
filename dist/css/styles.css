@@ -22587,12 +22587,17 @@ input[type=date] {
 }
 
 @media (max-width: 900px) {
+  .menu-navegacion ul li a {
+    font-size: 13px;
+  }
+  .intro {
+    padding-top: 55px;
+  }
   .jpg, .png, .webp, .gif {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 20px;
   }
   .miImagenJPEG, .miImagenPNG, .miImagenGIF, .ejemplo-imagenwebp {
     width: 50vw;
