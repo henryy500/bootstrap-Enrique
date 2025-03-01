@@ -394,8 +394,8 @@ $inverted-color:invert($color-caja-dato1);
 $color-caja-dato2:#ffcc00;
 $color-desaturate-dato2:desaturate($color-caja-dato2,40%);
 $color-base-dato3:blue;
-$gray-color-dato3:grayscale($color-base-dato3);
-$suave-color-dato3:tint($gray-color-dato3);
+$gray-color-dato3:#3498db;
+$complementary-color:complement($gray-color-dato3);
 $padding-top-listadoEnriquePublicaciones:1em;
 .html{
   width:100%;
@@ -451,7 +451,7 @@ $padding-top-listadoEnriquePublicaciones:1em;
 }
 
 .dato3{
-    background-color: $suave-color-dato3;
+    background-color: $complementary-color;
 }
 
 .dato1 p, .dato2 p, .dato3 p{
