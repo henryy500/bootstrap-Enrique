@@ -22742,7 +22742,7 @@ input[type=date] {
 .imagen-objectFit {
   width: 100%;
   height: 200px;
-  background-image: url("/dist/visualizarPublicacion/object-cover.png");
+  background-image: url("../assets/object-cover.png");
   background-size: cover;
   background-position: center;
   border-radius: 10px;
