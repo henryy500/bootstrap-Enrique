@@ -22388,7 +22388,7 @@ input[type=date] {
 }
 
 .miImagenJPEG {
-  background-image: url("/dist/visualizarPublicacion/images.jpeg");
+  background-image: url("/dist/images.jpeg");
   background-size: cover;
   background-position: center;
   width: 25vw;
