@@ -500,50 +500,64 @@ $font-family: Arial, sans-serif;
   background-color: $primary-color;
   overflow: hidden;
   width: 100%;
-  display: flex;  
+  display: flex;
   flex-direction: row-reverse;
-  align-items: center; 
-  justify-content: space-between; 
-  padding-right: 40px;  
-}
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 40px;
+  position: relative;
+  z-index: 100;
 
-.menu-navegacion ul li a {
+  // Fuente
+  font-size: $font-size;
+
+  // Opciones de los enlaces
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li {
+    display: inline-block;
+    margin-right: 30px; // Espaciado entre los elementos del menú
+  }
+
+  ul li a {
     color: white;
     padding: 14px 20px;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s;
-  
+    transition: background-color 0.3s ease;
+    font-size: $font-size-large;
+    
     &:hover {
       background-color: $hover-color;
     }
+  }
 }
 
-.menu-icono-publicacion1{
-  width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:fixed;
-  top:0;
-  z-index:2;
-  background-color: $primary-color;
+// Icono de publicación (se mantiene visible todo el tiempo)
+.icono-publicacion1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-.menu-navegacion ul{
-  list-style-type:none;
-    display:flex;
-    justify-content:end;
-    align-items:center;
-    padding: 0;
-    margin: 0;
-    
-    
-  }
+// Estilos para el icono del menú (puedes ajustar el tamaño de la imagen)
+.imagen-icono-publicacion1 {
+  width: 30px;
+  height: 30px;
+}
 
-  .menu-navegacion ul li {
-    display: inline-block;
-  }
 
 // Sección general
 .html-formatoImagenes {
