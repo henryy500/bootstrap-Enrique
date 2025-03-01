@@ -22317,14 +22317,8 @@ input[type=date] {
     justify-content: center;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .menu-navegacion {
-  background-color: #007BFF;
+  background-color: #333;
   overflow: hidden;
   width: 100%;
   display: flex;
@@ -22333,33 +22327,44 @@ input[type=date] {
   justify-content: space-between;
   padding-right: 40px;
   position: relative;
-  z-index: 100;
-  font-size: 16px;
 }
+
+.menu-navegacion ul li a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+.menu-navegacion ul li a:hover {
+  background-color: #575757;
+}
+
+.menu-icono-publicacion1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: #333;
+}
+
 .menu-navegacion ul {
   list-style-type: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
   align-items: center;
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
   max-width: 100%;
 }
+
 .menu-navegacion ul li {
   display: inline-block;
   margin-right: 30px;
-}
-.menu-navegacion ul li a {
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  font-size: 18px;
-}
-.menu-navegacion ul li a:hover {
-  background-color: #0056b3;
 }
 
 .icono-publicacion1 {
@@ -22390,7 +22395,7 @@ input[type=date] {
 }
 
 .html-formatoImagenes h1, .html-formatoImagenes .h1, h2, .h2 {
-  color: #007BFF;
+  color: #333;
 }
 
 .jpg {
@@ -22423,7 +22428,7 @@ input[type=date] {
 }
 .ejemplo-imagenjpg.jpg p {
   margin-top: 10px;
-  color: #007BFF;
+  color: #333;
 }
 
 .png {
@@ -22459,7 +22464,7 @@ input[type=date] {
 }
 .ejemplo-png.png p {
   margin-top: 10px;
-  color: #007BFF;
+  color: #333;
 }
 
 .gif {
@@ -22493,7 +22498,7 @@ input[type=date] {
 }
 .gif-imagen.gif p {
   margin-top: 10px;
-  color: #007BFF;
+  color: #333;
 }
 
 .webp {
@@ -22527,7 +22532,7 @@ input[type=date] {
 }
 .ejemplo-webp.webp p {
   margin-top: 10px;
-  color: #007BFF;
+  color: #333;
 }
 
 .JPEG-texto, .png-texto, .gif-texto, .webp-texto {
@@ -22553,7 +22558,7 @@ input[type=date] {
 }
 
 .icono-publicacion1 {
-  background-color: #007BFF;
+  background-color: #333;
   padding: 5px 0 5px 40px;
 }
 
@@ -23167,7 +23172,7 @@ input[type=date] {
     flex-direction: column !important;
     align-items: center;
     justify-content: center;
-    background-color: #007BFF;
+    background-color: #333;
     position: absolute;
     top: 0;
     right: 0;

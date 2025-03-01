@@ -495,20 +495,6 @@ $font-family: Arial, sans-serif;
   border-radius: $radius;
 }
 
-// Variables (puedes personalizarlas)
-$primary-color: #007BFF;   // Color principal (puedes cambiarlo)
-$hover-color: #0056b3;     // Color cuando pasa el mouse por encima (puedes cambiarlo)
-$font-size: 16px;          // Tamaño de fuente base
-$font-size-large: 18px;    // Tamaño de fuente en pantallas grandes
-$font-size-small: 14px;    // Tamaño de fuente en pantallas pequeñas
-
-// Estilos globales y resets
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 // Estilo del menú de navegación
 .menu-navegacion {
   background-color: $primary-color;
@@ -519,46 +505,53 @@ $font-size-small: 14px;    // Tamaño de fuente en pantallas pequeñas
   align-items: center;
   justify-content: space-between;
   padding-right: 40px;
-  position: relative;
-  z-index: 100;
+  position: relative; // Asegura que el menú se ajuste correctamente en pantallas más pequeñas
+}
 
-  // Fuente
-  font-size: $font-size;
+// Estilo de los enlaces del menú
+.menu-navegacion ul li a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
 
-  // Opciones de los enlaces
-  ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap; // Hace que los elementos se acomoden en una nueva línea si no hay suficiente espacio
-    max-width: 100%; // Se asegura de que los elementos no se salgan de la pantalla
-
-    // Estilo de los elementos de lista (li)
-    li {
-      display: inline-block;
-      margin-right: 30px;
-    }
-
-    // Estilo de los enlaces
-    li a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-      font-size: $font-size-large;
-      
-      &:hover {
-        background-color: $hover-color;
-      }
-    }
+  &:hover {
+    background-color: $hover-color;
   }
 }
 
-// Icono de publicación (se mantiene visible todo el tiempo)
+// Estilo del icono de publicación (se mantiene siempre visible)
+.menu-icono-publicacion1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: $primary-color;
+}
+
+// Estilo de la lista de navegación (flexbox y ajuste automático en pantallas pequeñas)
+.menu-navegacion ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap; // Hace que los elementos se acomoden automáticamente a la siguiente línea si no caben
+  max-width: 100%; // Evita que los elementos se desborden fuera de la pantalla
+}
+
+// Estilo de cada elemento de la lista (espaciado entre los elementos del menú)
+.menu-navegacion ul li {
+  display: inline-block;
+  margin-right: 30px; // Ajusta el espaciado entre los elementos
+}
+
+// Estilos para el icono de publicación (si tienes una imagen de icono)
 .icono-publicacion1 {
   display: flex;
   justify-content: center;
@@ -570,9 +563,9 @@ $font-size-small: 14px;    // Tamaño de fuente en pantallas pequeñas
   }
 }
 
-// Estilos para el icono del menú (puedes ajustar el tamaño de la imagen)
+// Estilos para la imagen del icono de publicación (ajustable)
 .imagen-icono-publicacion1 {
-  width: 30px;
+  width: 30px; // Puedes ajustar el tamaño de la imagen según necesites
   height: 30px;
 }
 
