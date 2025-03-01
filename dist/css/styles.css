@@ -22616,7 +22616,6 @@ input[type=date] {
   padding: 20px 20px;
   position: fixed;
   top: 0;
-  z-index: 2;
 }
 .menu-navegacionPropiedadesCSS.menu-navegacionPropiedadesCSS ul {
   width: 100%;
