@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatos de Imágenes</title>
+    <link href="/dist/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    
+<header>
+    <div class="menu-icono-publicacion1">
+    
+    <div class="menu-navegacion">
+    <nav>
+        <ul>
+            <li><a href="#intro">Introducción</a></li>
+            <li><a href="#jpg">JPEG</a></li>
+            <li><a href="#png">PNG</a></li>
+            <li><a href="#gif">GIF</a></li>
+            <li><a href="#webp">WebP</a></li>
+            <li><a href="#conclusion">Conclusión</a></li>
+        </ul>
+    </nav>
+    <div class="menu-hamburguesa" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    <div class="icono-publicacion1">
+        <img class="imagen-icono-publicacion1"/>
+    </div>
+    
+    </div>
+    
+    
+    
+    </div>
+   </div>
+</header>
+<main>
+<div class="html-formatoImagenes">
+    <div class="intro">
+        <h1>Introducción a los Formatos de Imágenes</h1>
+        <p>En este sitio exploraremos los principales formatos de imágenes utilizados en la web. Cada uno de estos formatos tiene características únicas que lo hacen adecuado para diferentes usos.</p>
+    </div>
+
+<section id="jpg">
+    <div class="jpg">
+        <div class="JPEG-texto">
+        <h2>JPEG (Joint Photographic Experts Group)</h2>
+        <p><strong>Características:</strong></p>
+        <ul>
+            <li>Es un formato de compresión con pérdida, lo que significa que reduce el tamaño del archivo eliminando detalles de la imagen.</li>
+            <li>Ideal para fotografías con gradientes de color.</li>
+            <li>No soporta transparencia.</li>
+            <li>El grado de compresión puede ser ajustado, lo que permite equilibrar la calidad y el tamaño del archivo.</li>
+        </ul>
+        <p><strong>Usos:</strong></p>
+        <ul>
+            <li>Fotografías y imágenes con muchos colores y detalles.</li>
+            <li>Usado principalmente en sitios web de fotografía, galerías de imágenes, etc.</li>
+            <li>Cuando se requiere reducir el tamaño del archivo sin importar demasiado la pérdida de calidad.</li>
+        </ul>
+        </div>
+        
+        <div class="ejemplo-imagenjpg">
+        <p><strong>Ejemplo de imagen JPEG:</strong></p>
+        <img class="miImagenJPEG" />
+    </div>
+    </div>
+    </section>
+
+<section id="png">
+    <div class="png">
+        <div class="png-texto">
+        <h2>PNG (Portable Network Graphics)</h2>
+        <p><strong>Características:</strong></p>
+        <ul>
+            <li>Formato sin pérdida de calidad, ideal para mantener la integridad de la imagen.</li>
+            <li>Soporta transparencia, lo que permite que las imágenes tengan fondos transparentes.</li>
+            <li>Utiliza un algoritmo de compresión sin pérdida, lo que significa que la calidad de la imagen no se ve afectada.</li>
+            <li>En general, los archivos PNG suelen ser más grandes que los JPEG, pero conservan toda la información original de la imagen.</li>
+        </ul>
+        <p><strong>Usos:</strong></p>
+        <ul>
+            <li>Imágenes con áreas transparentes, como logotipos, iconos o gráficos.</li>
+            <li>Cuando la calidad de la imagen es crucial y se necesitan imágenes sin compresión.</li>
+            <li>Gráficos y capturas de pantalla donde se necesitan bordes nítidos y sin pérdida de calidad.</li>
+        </ul>
+        </div>
+        <div class="ejemplo-png">
+        <p><strong>Ejemplo de imagen PNG:</strong></p>
+        <img class="miImagenPNG"/>
+        </div>
+    </div>
+    </section>
+
+<section id="gif">
+    <div class="gif">
+        <div class="gif-texto">
+        <h2>GIF (Graphics Interchange Format)</h2>
+        <p><strong>Características:</strong></p>
+        <ul>
+            <li>Soporta imágenes animadas, lo que lo convierte en un formato ideal para crear GIFs con movimiento.</li>
+            <li>Limitado a una paleta de 256 colores, lo que lo hace menos adecuado para imágenes complejas o con muchos colores.</li>
+            <li>Soporta transparencia, aunque con menos calidad que el PNG.</li>
+        </ul>
+        <p><strong>Usos:</strong></p>
+        <ul>
+            <li>Animaciones cortas y simples.</li>
+            <li>Memes, banners animados, y gráficos animados pequeños.</li>
+            <li>Imágenes de baja calidad con pocos colores, pero que necesitan movimiento o animación.</li>
+        </ul>
+        </div>
+        <div class="gif-imagen">
+        <p><strong>Ejemplo de imagen GIF:</strong></p>
+        <img class="miImagenGIF" />
+    </div>
+    </div>
+    </section>
+
+
+
+<section id="webp">
+    <div class="webp">
+        <div class="webp-texto">
+        <h2>WebP</h2>
+        <p><strong>Características:</strong></p>
+        <ul>
+            <li>Formato desarrollado por Google que ofrece una buena compresión con pérdida y sin pérdida.</li>
+            <li>Ofrece una mejor calidad en comparación con JPEG y PNG, a un tamaño de archivo más pequeño.</li>
+            <li>Soporta transparencia y animación, similar al PNG y GIF, respectivamente.</li>
+            <li>No es tan ampliamente soportado por navegadores más antiguos, aunque ya es compatible con la mayoría de los navegadores modernos.</li>
+        </ul>
+        <p><strong>Usos:</strong></p>
+        <ul>
+            <li>Imágenes en sitios web donde la velocidad de carga es crucial.</li>
+            <li>Ideal para crear imágenes pequeñas con buena calidad, sin sacrificar la carga del sitio.</li>
+            <li>Formato preferido en muchas plataformas debido a su excelente compresión y calidad.</li>
+        </ul>
+        </div>
+        <div class="ejemplo-webp">
+        <p><strong>Ejemplo de imagen WebP:</strong></p>
+        <img class="ejemplo-imagenwebp" />
+    </div>
+    </div>
+    </section>
+    </div>
+</main>
+<footer>
+<section id="conclusion">
+    <div class="conclusion">
+        <h2>Conclusión</h2>
+        <p>Cada formato de imagen tiene sus ventajas y desventajas. La elección del formato depende de factores como el tipo de imagen, la calidad deseada y el tamaño del archivo. Por ejemplo, si estás trabajando con fotografías, el formato JPEG es una excelente opción. Si necesitas imágenes con transparencias o gráficos con alta calidad, el PNG es el indicado. Y para animaciones, el GIF sigue siendo una opción popular, aunque los formatos más nuevos como WebP ofrecen una alternativa más eficiente.</p>
+    </div>
+    <div class="boton-admin">
+        <a href="/dist/index.html" class="botonA">Pulsa aqui para volver al admin</a>
+    </div>
+    </section>
+    </div>
+    
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-navegacion');
+            const hamburger = document.querySelector('.menu-hamburguesa');
+            
+      
+      
+            menu.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            imagenIcono.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>
