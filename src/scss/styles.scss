@@ -65,6 +65,11 @@ tr{
 th,td{
     border:2px solid black;
 }
+
+//Vamos a separar el titulo listado de usuarios de los botones y la tabla
+.titulo-listaUsuarios{
+  margin-top:20px;
+}
 //Estilos para el html de usuarios
 // Estilos de las publicaciones
 .publicacion1, .publicacion2, .publicacion3, .detallenoDisponible1, .detallenoDisponible2 {

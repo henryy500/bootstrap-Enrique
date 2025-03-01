@@ -21986,6 +21986,10 @@ th, td {
   border: 2px solid black;
 }
 
+.titulo-listaUsuarios {
+  margin-top: 20px;
+}
+
 .publicacion1, .publicacion2, .publicacion3, .detallenoDisponible1, .detallenoDisponible2 {
   padding: 10px 20px;
   font-size: 16px;
