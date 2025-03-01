@@ -488,6 +488,9 @@ $paddingFormatosImagen:20px;
 $paddingbotonAdmin:10px 10px;
 $background-colorBoton:green;
 $font-family: Arial, sans-serif;
+$font-size: 16px;
+$font-size-large: 18px;    // Tamaño de fuente en pantallas grandes
+$font-size-small: 14px;  
 
 // Mixin para bordes
 @mixin border-style($color, $radius: $border-radius) {
