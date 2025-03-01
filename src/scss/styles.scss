@@ -832,6 +832,11 @@ $color-hover-enlaces-footer:blue;
 $color-active-enlaces-footer:gray;
 $colorTitulos:black;
 $color-textoPropiedades:white;
+$color-textoPropiedades: #555; // Color del texto en la sección
+$colorTitulos: #333; // Color de los títulos
+$border-color: #ddd; // Color del borde
+$border-radius: 10px; // Radio de los bordes
+$color-background: linear-gradient(45deg, #ff7e5f, #feb47b); // Gradiente
 $border-color: #000;
 $color-botonA:white;
 $border-radius: 8px;
@@ -859,6 +864,7 @@ $font-family: Arial, sans-serif;
   padding:$paddingMenuNavegacion2;
   position:fixed;
   top:0;
+  z-index:2;
 
   &.menu-navegacionPropiedadesCSS ul {
     width:100%;
@@ -891,7 +897,7 @@ $font-family: Arial, sans-serif;
 .titulo-propiedadesCSS{
   width:100%;
   padding:7.5em;
-  background-color:map-get($color-titulosPropiedadesCSS, primary);
+  background-color:lighten(green,20%);
 
   &.titulo-propiedadesCSS h1,h2,h3{
     font-weight:bold;
@@ -901,47 +907,52 @@ $font-family: Arial, sans-serif;
     color:$color-textoPropiedades;
   }
 }
-
-//Le ponemos fondo a la siguiente seccion
-.propiedades-background{
-  background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradiente de naranja y rosa */
+// Propiedades generales para la sección
+// Propiedades generales para la sección
+.propiedades-background {
+  background: $color-background; // Mantener el gradiente de fondo
   padding: 4em;
   color: $color-textoPropiedades;
-
-  &.propiedades-background h1,h2,h3{
-    color:$colorTitulos;
-    font-weight:bold;
-  }
-}
-
-//Lo organizamos para ver como va a ser
-.propiedades-background {
-  width: 100%;
   
-}
+  // Estilos para títulos dentro de esta sección
+  h1, h2, h3 {
+    color: $colorTitulos;
+    font-weight: bold;
+  }
 
-//Lo dividimos en cuatro columnas los tipos de background y lo separamos un poco cada caja para que no quede todo muy pegado
-.tipos-background {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);  
-  gap: 20px;  
-  justify-items: center;  
-}
+  // Estilos generales para la caja de los tipos de background
+  .tipos-background {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); //Ajusta las columnas según el espacio que haya disponible
+    gap: 20px;
+    justify-items: center;
+    grid-auto-rows: minmax(200px, auto); //Asegura que las filas tengan un tamaño mínimo
+  }
 
-//Establecemos el ancho y demás en cada caja
-.tipos-background .background1, .tipos-background .background2, .tipos-background .background3, .tipos-background .background4 {
-  width: 100%; 
-  max-width: 300px; 
-  @include border-style($border-color);
-  padding: 20px;
-  box-sizing: border-box; 
-  border-radius:$border-radius;
-}
+  // Estilos generales para las cajas internas (background1, background2, etc.)
+  .tipos-background .background1, .tipos-background .background2, .tipos-background .background3, .tipos-background .background4 {
+    width: 100%;
+    max-width: 300px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    @include border-style($border-color);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: $border-radius;
+    transition: transform 0.3s ease; 
 
+    // Efecto hover para cada caja
+    &:hover {
+      transform: scale(1.05); 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    }
+  }
 
-.tipos-background .background1 p, .tipos-background .background2 p, .tipos-background .background3 p, .tipos-background .background4 p {
-  width: 100%; 
+  // Estilos para los párrafos dentro de cada caja
+  .tipos-background .background1 p, .tipos-background .background2 p, .tipos-background .background3 p, .tipos-background .background4 p {
+    width: 100%;
+    color: $color-textoPropiedades; // Mantener el color del texto
+  }
 }
 
 //Establecemos el color de fondo, en este caso, será otro gradiente  de la seccion objects

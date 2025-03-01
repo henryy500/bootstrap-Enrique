@@ -22616,6 +22616,7 @@ input[type=date] {
   padding: 20px 20px;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 .menu-navegacionPropiedadesCSS.menu-navegacionPropiedadesCSS ul {
   width: 100%;
@@ -22645,49 +22646,50 @@ input[type=date] {
 .titulo-propiedadesCSS {
   width: 100%;
   padding: 7.5em;
-  background-color: green;
+  background-color: #00e600;
 }
 .titulo-propiedadesCSS.titulo-propiedadesCSS h1, .titulo-propiedadesCSS.titulo-propiedadesCSS .h1, .titulo-propiedadesCSS h2, .titulo-propiedadesCSS .h2, .titulo-propiedadesCSS h3, .titulo-propiedadesCSS .h3 {
   font-weight: bold;
 }
 .titulo-propiedadesCSS.titulo-propiedadesCSS p {
-  color: white;
+  color: #555;
 }
 
 .propiedades-background {
-  background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradiente de naranja y rosa */
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
   padding: 4em;
-  color: white;
+  color: #555;
 }
-.propiedades-background.propiedades-background h1, .propiedades-background.propiedades-background .h1, .propiedades-background h2, .propiedades-background .h2, .propiedades-background h3, .propiedades-background .h3 {
-  color: black;
+.propiedades-background h1, .propiedades-background .h1, .propiedades-background h2, .propiedades-background .h2, .propiedades-background h3, .propiedades-background .h3 {
+  color: #333;
   font-weight: bold;
 }
-
-.propiedades-background {
-  width: 100%;
-}
-
-.tipos-background {
+.propiedades-background .tipos-background {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   justify-items: center;
+  grid-auto-rows: minmax(200px, auto);
 }
-
-.tipos-background .background1, .tipos-background .background2, .tipos-background .background3, .tipos-background .background4 {
+.propiedades-background .tipos-background .background1, .propiedades-background .tipos-background .background2, .propiedades-background .tipos-background .background3, .propiedades-background .tipos-background .background4 {
   width: 100%;
   max-width: 300px;
+  background-color: rgba(255, 255, 255, 0.9);
   border: 2px solid #000;
   border-radius: 8px;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 8px;
+  transition: transform 0.3s ease;
 }
-
-.tipos-background .background1 p, .tipos-background .background2 p, .tipos-background .background3 p, .tipos-background .background4 p {
+.propiedades-background .tipos-background .background1:hover, .propiedades-background .tipos-background .background2:hover, .propiedades-background .tipos-background .background3:hover, .propiedades-background .tipos-background .background4:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.propiedades-background .tipos-background .background1 p, .propiedades-background .tipos-background .background2 p, .propiedades-background .tipos-background .background3 p, .propiedades-background .tipos-background .background4 p {
   width: 100%;
+  color: #555;
 }
 
 .titulo-propiedades-objects {
