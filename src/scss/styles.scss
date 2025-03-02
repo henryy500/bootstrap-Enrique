@@ -377,125 +377,171 @@ input:focus {
 
 }
 
-//Para poder separar mi listado de suaurios con mi boton de añadir usuario
-.card.mb-4{
-    margin-top:30px;
-}
 //Estilos para el nuevo html generado para ver los datos resumidos del usuario Enrique y ver su listado de publicaciones
-//Titulos centrados
-.html h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-}
+// Variables de colores (sin cambios, manteniendo los que ya tienes)
+$color-listaEnriquePublicaciones: #3498db; 
+$color-caja-dato1: #002a57; 
+$color-fondo-claro: #f5f5f5; 
+$color-hover: darken($color-listaEnriquePublicaciones, 10%); 
+$color-translucido: rgba(255, 255, 255, 0.8); 
+$color-texto: #444; 
+$color-blanco: #ffffff; 
+$color-celdas: #f5f5f5; 
+$border-radius: 15px; 
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+$padding-top-listadoEnriquePublicaciones: 2em; 
+$padding: 1.5em 2em; 
+$margin-bottom: 2em; 
 
-.publicaciones h2{
-    text-align:center;
-}
-
-//Le ponemos fondo al html del listado de publicaciones de cada usuario
-//Variables
-$color-base-listadoEnrique: #3498db;
-$color-listaEnriquePublicaciones: adjust-hue($color-base, 240deg);
-$color-caja-dato1:#002a57;
-$inverted-color:invert($color-caja-dato1);
-$color-caja-dato2:#ffcc00;
-$color-desaturate-dato2:desaturate($color-caja-dato2,40%);
-$color-base-dato3:blue;
-$gray-color-dato3:#3498db;
-$complementary-color:complement($gray-color-dato3);
-$padding-top-listadoEnriquePublicaciones:1em;
-.html{
-  width:100%;
-  height:100%;
+//Importante: un codigo organizado para saber donde está cada cosa y esté tdo mucho más limpio
+// Estilo general para el html del listado de publicaciones
+.html {
+  width: 100%;
+  height: 100%;
   background-color: $color-listaEnriquePublicaciones;
-  padding-top:$padding-top-listadoEnriquePublicaciones;
+  padding-top: $padding-top-listadoEnriquePublicaciones;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; 
 
-  &.html h1{
-    font-weight:bold;
-    
-  }
-}
-//Ahora vamos a ponerle los border en la tabla (listado) de publicaciones
-.tablaPublicaciones {
-  
-    border:2px solid black;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-}
-
-.tablaPublicaciones th,td{
-    border:2px solid black;
-}
-
-//Clasificamos en columnas los datos mas relevantes y resumidos de Enrique
-.datos{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:20px;
-    margin-bottom: 30px;
-}
-
-//Creamos la primera caja de informacion
-.dato1, .dato2, .dato3{
-    border:2px solid black;
-    border-radius:$border-radius;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    p {
-        margin: 0;
-        font-size: 1.5rem;
-        color: #444;
-      }
-    }
-
-//Ponemos colores bonitos en cada caja que hemos creado que identifica cada dato
-.dato1{
-    background-color: $inverted-color;
-}
-
-.dato2{
-    background-color: $color-desaturate-dato2;
-}
-
-.dato3{
-    background-color: $complementary-color;
-}
-
-.dato1 p, .dato2 p, .dato3 p{
-    color:#666;
-}
-
-// Datos resumidos de Enrique
-.datos-resumidos {
-    margin-bottom: 30px;
+  h1 {
+    font-weight: bold;
     text-align: center;
-
-    &.datos-resumidos p{
-      font-size:1.5rem;
-    }
-  
-    
+    margin-bottom: 1em;
   }
-
-//Centramos el titulo, listado y demas
-.publicaciones{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
-
-    &.publicaciones h2{
-      font-weight:bold;
-    }
 }
 
-//Lo ajustamos para pantallas mas pequeñas
-@media(max-width:900px){
-  .datos{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+// Estilos para la sección de publicaciones
+.publicaciones {
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: $padding; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .tablaPublicaciones {
+    width: 100%;
+    border: 2px solid black;
+    box-shadow: $box-shadow;
+    margin-bottom: $margin-bottom;
+    border-radius: 10px; // Bordes redondeados en la tabla
+    overflow-x: auto; // Asegura que en pantallas pequeñas la tabla sea desplazable
+
+    th, td {
+      padding: 1em; // Añadir relleno a celdas para más espacio
+      text-align: center;
+      border: 2px solid black;
+    }
+
+    th {
+      background-color: $color-caja-dato1; // Aseguramos que el encabezado tenga color
+      color: $color-blanco;
+      font-size: 1.1rem;
+    }
+
+    td {
+      background-color: $color-celdas; // Color de fondo claro para las celdas
+      color: #333;
+    }
+  }
+
+  // Acciones de cada fila de publicación
+  .acciones {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+
+    .botonBorrar, .botonBloquear, .botonDesbloquear, .botonVisualizar {
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      background-color: $color-listaEnriquePublicaciones;
+      color: $color-blanco;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .botonBorrar:hover, .botonBloquear:hover, .botonDesbloquear:hover, .botonVisualizar:hover {
+      background-color: $color-hover; 
+    }
+  }
+}
+
+// Estilo para los datos resumidos del usuario
+.datos-resumidos {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto $margin-bottom auto;
+  text-align: center;
+  padding: 2em;
+  background-color: $color-translucido; 
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  p {
+    font-size: 1.2rem;
+    color: $color-texto;
+    margin: 0.5em 0;
+  }
+}
+
+// Como van a estar distribuidos los datos
+.datos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); // Uso de grid para mejor organización
+  gap: 30px;
+  margin-bottom: $margin-bottom;
+}
+
+// Caja de cada dato de usuario
+.dato1, .dato2, .dato3 {
+  background-color: $color-caja-dato1;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  padding: 1em;
+  transition: background-color 0.3s ease;
+
+  p {
+    margin: 0;
+    font-size: 1.4rem;
+    color: $color-blanco;
+  }
+
+  &:hover {
+    background-color: lighten($color-caja-dato1, 10%);
+  }
+}
+
+// Lo ajustamos para pantallas mas pequeñas
+@media(max-width: 900px) {
+  .datos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .tablaPublicaciones th, .tablaPublicaciones td {
+    font-size: 0.9rem; 
+  }
+
+  .publicaciones {
+    padding: 1em;
+  }
+
+  .botonBorrar, .botonBloquear, .botonDesbloquear, .botonVisualizar {
+    font-size: 0.8rem;
+    padding: 0.4em 0.8em;
   }
 }
 
@@ -588,7 +634,7 @@ $font-family: Arial, sans-serif;
 
 // Estilos para la imagen del icono de publicación (ajustable)
 .imagen-icono-publicacion1 {
-  width: 30px; // Puedes ajustar el tamaño de la imagen según necesites
+  width: 30px; 
   height: 30px;
 }
 
