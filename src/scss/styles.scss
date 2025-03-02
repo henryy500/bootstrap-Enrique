@@ -543,7 +543,7 @@ $margin-bottom: 2em;
   }
 }
 
-//Va a ser importante tener el codigo organizado para esta publicacion
+//Va a ser importante tener el codigo organizado para estas tres publicaciones
 //Estilos para la primera publicacion (formatos de imágenes)
 // Variables para la primera publicacion
 $background-color: #f4f4f4;
@@ -1195,6 +1195,11 @@ $font-family: Arial, sans-serif;
   z-index:2;
   transform: translateY(10px);
   margin-left:50px;
+}
+
+//Ajustamos el tamaño de la fuente
+.titulo-propiedadesCSS p, .propiedades-background p, .titulo-propiedades-objects p, .object-fit ul li, .mas-informacion p{
+  font-size:1.2rem;
 }
 
 //Estilizamos el boton

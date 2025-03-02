@@ -22885,6 +22885,10 @@ input:focus {
   margin-left: 50px;
 }
 
+.titulo-propiedadesCSS p, .propiedades-background p, .titulo-propiedades-objects p, .object-fit ul li, .mas-informacion p {
+  font-size: 1.2rem;
+}
+
 .boton-admin2 {
   display: flex;
   justify-content: end;
