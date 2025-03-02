@@ -262,7 +262,7 @@ $form-background: #ecf0f1;
   justify-content:center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
-  transform:scale(0.5);
+  
   
   h1 {
     font-size: 2rem;
@@ -271,6 +271,20 @@ $form-background: #ecf0f1;
     margin-bottom: 20px;
   }
 }
+
+// Estilo para el campo del formulario
+fieldset {
+  width: 100%;
+  max-width: 400px;  // Esto limita el tamaño máximo del formulario
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 // Estilos para el campo de texto
 .componente-texto-formulario {

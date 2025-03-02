@@ -22133,13 +22133,24 @@ th, td {
   justify-content: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
-  transform: scale(0.5);
 }
 .formulario h1, .formulario .h1 {
   font-size: 2rem;
   font-weight: bold;
   color: #3498db;
   margin-bottom: 20px;
+}
+
+fieldset {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .componente-texto-formulario {
