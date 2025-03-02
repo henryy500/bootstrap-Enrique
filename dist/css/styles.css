@@ -22129,6 +22129,7 @@ th, td {
   padding: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   transform: scale(0.65);
@@ -22138,15 +22139,6 @@ th, td {
   font-weight: bold;
   color: #3498db;
   margin-bottom: 20px;
-}
-
-fieldset {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .componente-texto-formulario {
