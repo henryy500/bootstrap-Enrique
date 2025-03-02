@@ -58,18 +58,25 @@ body{
 }
 
 //Estilos para todos los td y th de las tablas
-
 tr{
     border:2px solid black;
 }
 th,td{
     border:2px solid black;
+    
 }
 
-//Vamos a separar el titulo listado de usuarios de los botones y la tabla
+//Vamos a separar el titulo listado de usuarios de los botones y la tabla para centrar el contenido
 .titulo-listaUsuarios{
   margin-top:20px;
 }
+
+#tablaUsuarios{
+  th, td{
+    text-align:center;
+  }
+}
+
 //Estilos para el html de usuarios
 // Estilos de las publicaciones
 .publicacion1, .publicacion2, .publicacion3, .detallenoDisponible1, .detallenoDisponible2 {
@@ -247,7 +254,8 @@ $border-radius: 10px;
 $padding-input: 15px;
 $form-background: #ecf0f1;
 
-// Diseño del formulario principal
+//Seccion formularios
+// Diseño para los formularios
 .formulario {
   width: 100%;
   max-width: 600px;
@@ -284,7 +292,7 @@ fieldset {
 }
 
 
-// Estilos para el campo de texto
+// Estilos para el campo de texto de los formularios
 .componente-texto-formulario {
   width: 100%;
   padding: $padding-input;
@@ -310,7 +318,7 @@ label {
   align-self: flex-start;
 }
 
-// Estilos para el botón
+// Estilos para el botón de los formularios
 #btnAñadir,#btnEditar {
   width: 100%;
   padding: 15px;
@@ -432,23 +440,23 @@ $margin-bottom: 2em;
     border: 2px solid black;
     box-shadow: $box-shadow;
     margin-bottom: $margin-bottom;
-    border-radius: 10px; // Bordes redondeados en la tabla
-    overflow-x: auto; // Asegura que en pantallas pequeñas la tabla sea desplazable
+    border-radius: 10px; 
+     
 
     th, td {
-      padding: 1em; // Añadir relleno a celdas para más espacio
+      padding: 1em; 
       text-align: center;
       border: 2px solid black;
     }
 
     th {
-      background-color: $color-caja-dato1; // Aseguramos que el encabezado tenga color
+      background-color: $color-caja-dato1; 
       color: $color-blanco;
       font-size: 1.1rem;
     }
 
     td {
-      background-color: $color-celdas; // Color de fondo claro para las celdas
+      background-color: $color-celdas; 
       color: #333;
     }
   }

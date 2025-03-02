@@ -21990,6 +21990,10 @@ th, td {
   margin-top: 20px;
 }
 
+#tablaUsuarios th, #tablaUsuarios td {
+  text-align: center;
+}
+
 .publicacion1, .publicacion2, .publicacion3, .detallenoDisponible1, .detallenoDisponible2 {
   padding: 10px 20px;
   font-size: 16px;
@@ -22266,7 +22270,6 @@ input:focus {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 2em;
   border-radius: 10px;
-  overflow-x: auto;
 }
 .publicaciones .tablaPublicaciones th, .publicaciones .tablaPublicaciones td {
   padding: 1em;
