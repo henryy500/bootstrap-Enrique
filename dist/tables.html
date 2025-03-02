@@ -125,7 +125,7 @@
                                         </tr>
                                     </thead>
                                     
-                                    <tbody>
+                                    <tbody id="usuarios-body">
                                         <tr id="usuario1">
                                             <td>Enrique</td>
                                             <td>Saura Martinez</td>
@@ -241,5 +241,36 @@
         <script src="js/alertaconfirmacionBorrar.js"></script> <!-- Alerta de confirmacion para verificar que se va a borrar el usuario -->
         <script src="js/alertaconfirmacionBloquearyDesbloquear.js"></script> <!-- Alerta de confirmacion para bloquear y desbloquear el usuario -->
         <script src="js/alertaDesbloqueaUsuario.js"></script>
+        <script>
+            window.onload = function() {
+                // Obtener los usuarios del localStorage
+                const usuariosList = JSON.parse(localStorage.getItem('tablaUsuarios')) || [];
+    
+                // Acceder al cuerpo de la tabla
+                const usuariosBody = document.getElementById('usuarios-body');
+    
+                // Insertar las filas de usuarios
+                usuariosList.forEach(function(usuario) {
+                    const newRow = document.createElement('tr');
+                    newRow.innerHTML = `
+                        <td>${usuario.nombre}</td>
+                        <td>${usuario.apellidos}</td>
+                        <td>${usuario.email}</td>
+                        <td>${usuario.fechaNacimiento}</td>
+                        <td>${usuario.pais}</td>
+                        <td>${usuario.ciudad}</td>
+                        <td>
+                            <div class="acciones">
+                                <a href="#" class="botonBorrar">Borrar</a>
+                                <a href="#" class="botonBloquear">Bloquear</a>
+                                <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
+                                <a href="visualizarusuario${usuario.nombre}.html" class="botonVisualizar">Visualizar</a>
+                            </div>
+                        </td>
+                    `;
+                    usuariosBody.appendChild(newRow);
+                });
+            }
+        </script>
     </body>
 </html>
