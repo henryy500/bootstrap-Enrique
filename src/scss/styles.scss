@@ -883,9 +883,6 @@ $font-family: Arial, sans-serif;
 }
 
 // Menu de navegación
-.menu-icono{
-  z-index:2;
-}
 .menu-navegacionPropiedadesCSS {
   width: 100%;
   display: flex;
@@ -1005,6 +1002,7 @@ $font-family: Arial, sans-serif;
   gap: 30px; 
   justify-items: center;
   align-items: start; 
+ 
 
   &.objects-cajas .object-fit{
     width: 100%;
