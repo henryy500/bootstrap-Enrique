@@ -235,42 +235,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
-        <script src="js/bloquearyDesbloquearUsuario.js"></script> <!-- Archivo javascript necesario para bloquear y desbloquear usuarios -->
+        <script src="js/datatables-simple-demo.js"></script>  
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="js/alertaconfirmacionBorrar.js"></script> <!-- Alerta de confirmacion para verificar que se va a borrar el usuario -->
         <script src="js/alertaconfirmacionBloquearyDesbloquear.js"></script> <!-- Alerta de confirmacion para bloquear y desbloquear el usuario -->
-        <script src="js/alertaDesbloqueaUsuario.js"></script>
-        <script>
-            window.onload = function() {
-                // Obtener los usuarios del localStorage
-                const usuariosList = JSON.parse(localStorage.getItem('tablaUsuarios')) || [];
-    
-                // Acceder al cuerpo de la tabla
-                const usuariosBody = document.getElementById('usuarios-body');
-    
-                // Insertar las filas de usuarios
-                usuariosList.forEach(function(usuario) {
-                    const newRow = document.createElement('tr');
-                    newRow.innerHTML = `
-                        <td>${usuario.nombre}</td>
-                        <td>${usuario.apellidos}</td>
-                        <td>${usuario.email}</td>
-                        <td>${usuario.fechaNacimiento}</td>
-                        <td>${usuario.pais}</td>
-                        <td>${usuario.ciudad}</td>
-                        <td>
-                            <div class="acciones">
-                                <a href="#" class="botonBorrar">Borrar</a>
-                                <a href="#" class="botonBloquear">Bloquear</a>
-                                <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
-                                <a href="visualizarusuario${usuario.nombre}.html" class="botonVisualizar">Visualizar</a>
-                            </div>
-                        </td>
-                    `;
-                    usuariosBody.appendChild(newRow);
-                });
-            }
-        </script>
+        <script src="js/añadirUsuario.js"></script> <!-- Archivo que añade y borra usuario nuevo creado -->
     </body>
 </html>
