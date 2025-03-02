@@ -883,6 +883,9 @@ $font-family: Arial, sans-serif;
 }
 
 // Menu de navegación
+.menu-icono{
+  z-index:2;
+}
 .menu-navegacionPropiedadesCSS {
   width: 100%;
   display: flex;
@@ -893,6 +896,7 @@ $font-family: Arial, sans-serif;
   padding:$paddingMenuNavegacion2;
   position:fixed;
   top:0;
+  
   
 
   &.menu-navegacionPropiedadesCSS ul {

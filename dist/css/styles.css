@@ -22616,6 +22616,10 @@ input:focus {
   width: 100%;
 }
 
+.menu-icono {
+  z-index: 2;
+}
+
 .menu-navegacionPropiedadesCSS {
   width: 100%;
   display: flex;
