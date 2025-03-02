@@ -22626,6 +22626,10 @@ input:focus {
   color: #003f7f;
 }
 
+.html-formatoImagenes p, .jpg ul li, .png ul li, .webp ul li, .gif ul li, .conclusion p {
+  font-size: 1.2rem;
+}
+
 @media (max-width: 900px) {
   .menu-navegacion ul li a {
     font-size: 13px;

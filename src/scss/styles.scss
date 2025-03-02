@@ -235,7 +235,7 @@ th,td{
     }
 
 }
-// Variables de color y tipografía
+// Variables de color y tipografía para el formulario
 $color-base: #3498db;
 $color-darker: darken($color-base, 15%);
 $color-boton: #3498db;
@@ -245,8 +245,6 @@ $font-size: 1.2rem;
 $font-weight: bold;
 $border-radius: 10px;
 $padding-input: 15px;
-
-// Fondo del formulario
 $form-background: #ecf0f1;
 
 // Diseño del formulario principal
@@ -518,7 +516,7 @@ $margin-bottom: 2em;
   }
 
   &:hover {
-    background-color: lighten($color-caja-dato1, 10%);
+    background-color: lighten($color-caja-dato1, 10%); //Color de diseño para la caja
   }
 }
 
@@ -545,6 +543,7 @@ $margin-bottom: 2em;
   }
 }
 
+//Va a ser importante tener el codigo organizado para esta publicacion
 //Estilos para la primera publicacion (formatos de imágenes)
 // Variables para la primera publicacion
 $background-color: #f4f4f4;
@@ -666,7 +665,6 @@ $font-family: Arial, sans-serif;
     
 }
   .miImagenJPEG{
-    
     background-size: cover; 
     background-position: center;
     width:25vw;
@@ -719,8 +717,7 @@ $font-family: Arial, sans-serif;
     display:flex;
     flex-direction: column;
     
-    
-  }
+}
 
   .ejemplo-png {
     width: 50%;
@@ -869,6 +866,11 @@ $font-family: Arial, sans-serif;
   }
 }
 
+//Ajustamos el tamaño de la fuente del texto de esta publicacion
+.html-formatoImagenes p, .jpg ul li, .png ul li, .webp ul li, .gif ul li, .conclusion p{
+  font-size:1.2rem;
+}
+
 //Lo ajustamos para pantallas de 900px
 @media(max-width:900px){
   .menu-navegacion ul li a{
@@ -884,11 +886,11 @@ $font-family: Arial, sans-serif;
     justify-content:center;
     
   }
-    .miImagenJPEG, .miImagenPNG, .miImagenGIF, .ejemplo-imagenwebp{
+  .miImagenJPEG, .miImagenPNG, .miImagenGIF, .ejemplo-imagenwebp{
       width:50vw;
     }
 
-    .boton-admin{
+  .boton-admin{
       display:flex;
       justify-content:center;
     }
@@ -898,6 +900,7 @@ $font-family: Arial, sans-serif;
 
 //Estilos para la segunda publicacion
 //Variables que vamos a necesitar para esta segunda publicacion
+//A todas o casi todas las variables para luego relaizar el map-get le he asignado el mismo valor primary
 $color-MenuNavegacion:(primary: #fce1e1);
 $color-titulosPropiedadesCSS:(primary:green);
 $color-masInformacion:(primary:black);
