@@ -76,7 +76,7 @@
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Usuarios
                             </a>
@@ -107,9 +107,11 @@
                                 .
                             </div>
                         </div>
-                        <a href="formulario.html" class="botonaniadirUsuario">Añadir usuario</a><a href="formulario2.html" class="botonEditar">Editar usuario</a>
-                        <div class="titulo-listaUsuarios">
-                        <h1>Listado de usuarios</h1>
+                        <a href="../formulario/formulario.html" class="botonaniadirUsuario">Añadir usuario</a><a href="../formulario/formulario2.html" class="botonEditar">Editar usuario</a>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Listado de usuarios
                             </div>
                             <div class="card-body">
                                 <table id="tablaUsuarios">
@@ -125,7 +127,7 @@
                                         </tr>
                                     </thead>
                                     
-                                    <tbody id="usuarios-body">
+                                    <tbody>
                                         <tr id="usuario1">
                                             <td>Enrique</td>
                                             <td>Saura Martinez</td>
@@ -135,10 +137,10 @@
                                             <td>Murcia</td>
                                             <td>
                                                 <div class="acciones">
-                                                    <a href="#" class="botonBorrar" id="deleteUserButton" onclick="borrarUsuario('usuario1')">Borrar</a>
-                                                    <a href="#" class="botonBloquear">Bloquear</a>
-                                                    <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
-                                                    <a href="visualizarEnrique.html" class="botonVisualizar">Visualizar</a>
+                                                    <a href="#" class="botonBorrar" onclick="borrarUsuario('usuario1')">Borrar</a>
+                                                    <a href="#" class="botonBloquear" onclick="bloquearUsuario(this)">Bloquear</a>
+                                                    <a href="#" class="botonDesbloquear" onclick="desbloquearUsuario(this)" style="display:none;">Desbloquear</a>
+                                                    <a href="/dist/visualizarEnrique.html" class="botonVisualizar">Visualizar</a>
                                                 </div>
                                             </td>
                                             
@@ -153,10 +155,10 @@
                                             <td>Murcia</td>
                                             <td>
                                                 <div class="acciones">
-                                                    <a href="#" class="botonBorrar">Borrar</a>
-                                                    <a href="#" class="botonBloquear">Bloquear</a>
-                                                    <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
-                                                    <a href="visualizarusuarioRaul.html" class="botonVisualizar">Visualizar</a>
+                                                    <a href="#" class="botonBorrar" onclick="borrarUsuario('usuario2')">Borrar</a>
+                                                    <a href="#" class="botonBloquear" onclick="bloquearUsuario(this)">Bloquear</a>
+                                                    <a href="#" class="botonDesbloquear" onclick="desbloquearUsuario(this)" style="display:none;">Desbloquear</a>
+                                                    <a href="/dist/visualizarusuarioRaul.html" class="botonVisualizar">Visualizar</a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -169,10 +171,10 @@
                                             <td>Murcia</td>
                                             <td>
                                                 <div class="acciones">
-                                                    <a href="#" class="botonBorrar">Borrar</a>
-                                                    <a href="#" class="botonBloquear">Bloquear</a>
-                                                    <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
-                                                    <a href="visualizarusuarioIvan.html" class="botonVisualizar">Visualizar</a>
+                                                    <a href="#" class="botonBorrar" onclick="borrarUsuario('usuario3')">Borrar</a>
+                                                    <a href="#" class="botonBloquear" onclick="bloquearUsuario(this)">Bloquear</a>
+                                                    <a href="#" class="botonDesbloquear" onclick="desbloquearUsuario(this)" style="display:none;">Desbloquear</a>
+                                                    <a href="/dist/visualizarusuarioIvan.html" class="botonVisualizar">Visualizar</a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -185,10 +187,10 @@
                                             <td>Murcia</td>
                                             <td>
                                                 <div class="acciones">
-                                                    <a href="#" class="botonBorrar">Borrar</a>
-                                                    <a href="#" class="botonBloquear">Bloquear</a>
-                                                    <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
-                                                    <a href="visualizarusuarioJuan.html" class="botonVisualizar">Visualizar</a>
+                                                    <a href="#" class="botonBorrar" onclick="borrarUsuario('usuario4')">Borrar</a>
+                                                    <a href="#" class="botonBloquear" onclick="bloquearUsuario(this)">Bloquear</a>
+                                                    <a href="#" class="botonDesbloquear" onclick="desbloquearUsuario(this)" style="display:none;">Desbloquear</a>
+                                                    <a href="/dist/visualizarusuarioJuan.html" class="botonVisualizar">Visualizar</a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -201,11 +203,10 @@
                                             <td>Murcia</td>
                                             <td>
                                                 <div class="acciones">
-                                                    
-                                                    <a href="#" class="botonBorrar">Borrar</a>
-                                                    <a href="#" class="botonBloquear">Bloquear</a>
-                                                    <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
-                                                    <a href="visualizarusuariaAlicia.html" class="botonVisualizar">Visualizar</a>
+                                                    <a href="#" class="botonBorrar" onclick="borrarUsuario('usuario5')">Borrar</a>
+                                                    <a href="#" class="botonBloquear" onclick="bloquearUsuario(this)">Bloquear</a>
+                                                    <a href="#" class="botonDesbloquear" onclick="desbloquearUsuario(this)" style="display:none;">Desbloquear</a>
+                                                    <a href="/dist/visualizarusuariaAlicia.html" class="botonVisualizar">Visualizar</a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -216,7 +217,7 @@
                                 
                             </div>
                             
-                        
+                        </div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -236,12 +237,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="js/alertaconfirmacionBorrar.js"></script> <!-- Alerta de confirmacion para verificar que se va a borrar el usuario -->
-        <script src="js/alertaconfirmacionBloquearyDesbloquear.js"></script> <!-- Alerta de confirmacion para bloquear y desbloquear el usuario -->
-        <script src="js/añadirUsuario.js"></script> <!-- Archivo que añade y borra usuario nuevo creado -->
-       
+        <script src="js/datatables-simple-demo.js"></script>
+        <script src="js/bloquearyDesbloquearUsuario.js"></script> <!-- Archivo javascript necesario para bloquear y desbloquear usuarios -->
+        <script src="js/borrarUsuario.js"></script> <!-- Archivo necesario para borrar el usuario -->
         
     </body>
 </html>

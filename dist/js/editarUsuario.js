@@ -90,3 +90,5 @@ function cargarFormularioEdicion(usuarioEmail) {
         document.getElementById('formulario-edicion').style.display = 'block';
     }
 }
+
+
