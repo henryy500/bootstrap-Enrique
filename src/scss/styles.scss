@@ -389,7 +389,7 @@ $color-listaEnriquePublicaciones: #3498db;
 $color-caja-dato1: #002a57; 
 $color-fondo-claro: #f5f5f5; 
 $color-hover: darken($color-listaEnriquePublicaciones, 10%); 
-$color-translucido: rgba(255, 255, 255, 0.8); 
+$color-fondo-seccionDatos: rgba(255, 255, 255, 0.8); 
 $color-texto: #444; 
 $color-blanco: #ffffff; 
 $color-celdas: #f5f5f5; 
@@ -427,7 +427,8 @@ $margin-bottom: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: start;
+  margin-top:40px;
 
   h2 {
     font-weight: bold;
@@ -441,7 +442,7 @@ $margin-bottom: 2em;
     box-shadow: $box-shadow;
     margin-bottom: $margin-bottom;
     border-radius: 10px; 
-     
+    
 
     th, td {
       padding: 1em; 
@@ -487,10 +488,10 @@ $margin-bottom: 2em;
 .datos-resumidos {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto $margin-bottom auto;
+  margin: 0 auto;
   text-align: center;
   padding: 2em;
-  background-color: $color-translucido; 
+  background-color: $color-fondo-seccionDatos; 
   border-radius: $border-radius;
   box-shadow: $box-shadow;
 
@@ -504,7 +505,7 @@ $margin-bottom: 2em;
 // Como van a estar distribuidos los datos
 .datos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); // Uso de grid para mejor organización
+  grid-template-columns: repeat(1fr,1fr,1fr); 
   gap: 30px;
   margin-bottom: $margin-bottom;
 }
