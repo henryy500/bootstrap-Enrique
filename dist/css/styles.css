@@ -22176,7 +22176,7 @@ label {
   align-self: flex-start;
 }
 
-button {
+#btnAñadir, #btnEditar {
   width: 100%;
   padding: 15px;
   font-size: 1.1rem;
@@ -22188,11 +22188,11 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-button:hover {
+#btnAñadir:hover, #btnEditar:hover {
   background-color: #2980b9;
   transform: scale(1.05);
 }
-button:active {
+#btnAñadir:active, #btnEditar:active {
   background-color: #1d6fa5;
 }
 
