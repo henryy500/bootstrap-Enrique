@@ -22322,7 +22322,6 @@ input:focus {
   align-items: center;
   justify-content: start;
   margin-top: 40px;
-  overflow-x: auto;
 }
 .publicaciones h2, .publicaciones .h2 {
   font-weight: bold;
