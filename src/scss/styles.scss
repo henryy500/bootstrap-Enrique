@@ -152,6 +152,8 @@ $sombra-cajas-admin:rgba(0, 0, 0, 0.1);
 //Lo ajustamos para pantallas mas pequeñas
 @media(max-width:768px){
   #tablaUsuarios{
+    display:flex;
+    justify-content:start;
     transform:scale(0.7);
     margin-right:30px;
   }
