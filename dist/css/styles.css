@@ -23269,7 +23269,7 @@ input:focus {
     align-items: center;
     justify-content: center;
     background-color: #4CAF50;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
@@ -23278,9 +23278,6 @@ input:focus {
   }
   .titulo-propiedadesCSS {
     text-align: center;
-  }
-  .object-position {
-    z-index: -2;
   }
   .frase-footer {
     text-align: center;
