@@ -22046,6 +22046,8 @@ th, td {
 @media (max-width: 768px) {
   #tablaUsuarios {
     display: flex;
+    flex-direction: column;
+    justify-content: start;
     transform: scale(0.7);
     margin-right: 30px;
   }
