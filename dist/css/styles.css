@@ -22043,15 +22043,15 @@ th, td {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  #tablaUsuarios {
-    max-width: 200px;
-  }
-}
 #tablaPublicaciones th, #tablaPublicaciones td {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  #tablaUsuarios {
+    max-width: 500px;
+  }
+}
 .publicacion1, .publicacion2, .publicacion3, .detallenoDisponible1, .detallenoDisponible2 {
   padding: 10px 20px;
   font-size: 16px;

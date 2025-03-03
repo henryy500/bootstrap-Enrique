@@ -149,16 +149,16 @@ $sombra-cajas-admin:rgba(0, 0, 0, 0.1);
   }
 }
 
-//Lo ajustamos para pantallas mas pequeñas
-@media(max-width:768px){
-  #tablaUsuarios{
-    min-width:200px;
-  }
-}
-
 #tablaPublicaciones{
   th, td{
     text-align:center;
+  }
+}
+
+//Lo ajustamos para pantallas mas pequeñas
+@media(max-width:768px){
+  #tablaUsuarios{
+    max-width:500px;
   }
 }
 
