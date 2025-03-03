@@ -22921,6 +22921,10 @@ input:focus {
   font-weight: bold;
 }
 
+.enlaces-footer ul li {
+  list-style-type: none;
+}
+
 .enlaces-footer a {
   text-decoration: none;
   color: orange;
