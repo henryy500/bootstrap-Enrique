@@ -22043,6 +22043,11 @@ th, td {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  #tablaUusarios {
+    transform: scale(0.5);
+  }
+}
 #tablaPublicaciones th, #tablaPublicaciones td {
   text-align: center;
 }
