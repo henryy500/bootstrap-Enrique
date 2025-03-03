@@ -22044,7 +22044,7 @@ th, td {
 }
 
 @media (max-width: 768px) {
-  #tablaUusarios {
+  #tablaUsuarios {
     transform: scale(0.5);
   }
 }
