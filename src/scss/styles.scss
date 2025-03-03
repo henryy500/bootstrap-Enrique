@@ -143,23 +143,26 @@ $sombra-cajas-admin:rgba(0, 0, 0, 0.1);
   margin-top:20px;
 }
 
+.card-body{
+  width:100%;
+  overflow-x:auto; //Esto lo que hace es que se pueda scrollear hacia la derecha la tabla y que no afecte tanto al diseño
+}
+
 #tablaUsuarios{
+  width:100%;
+  border-collapse:collapse;
+  
+
   th, td{
     text-align:center;
+    font-size:1.2rem;
   }
 }
 
 #tablaPublicaciones{
   th, td{
     text-align:center;
-  }
-}
-
-//Lo ajustamos para pantallas mas pequeñas
-@media(max-width:768px){
-  #tablaUsuarios{
-    width:100vw;
-    max-width:400px;
+    
   }
 }
 
@@ -515,6 +518,7 @@ $margin-bottom: 2em;
   align-items: center;
   justify-content: start;
   margin-top:40px;
+  overflow-x: auto; //Hace que pueda scrollearse la tabla y que afecte menos al diseño
 
   h2 {
     font-weight: bold;
@@ -637,6 +641,8 @@ $margin-bottom: 2em;
     padding: 0.4em 0.8em;
   }
 }
+
+
 
 //Va a ser importante tener el codigo organizado para estas tres publicaciones
 //Estilos para la primera publicacion (formatos de imágenes)
