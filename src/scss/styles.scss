@@ -1029,13 +1029,13 @@ $paddingFooter:20px;
 $background-colorBoton:green;
 $font-family: Arial, sans-serif;
 
-
+//Menu de navegacion
 .menu-icono{
   width: 100%;
-  
+  position:fixed;
+  z-index:2;
 }
 
-// Menu de navegación
 .menu-navegacionPropiedadesCSS {
   width: 100%;
   display: flex;

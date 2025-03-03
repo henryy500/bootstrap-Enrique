@@ -22719,6 +22719,8 @@ input:focus {
 }
 .menu-icono {
   width: 100%;
+  position: fixed;
+  z-index: 2;
 }
 
 .menu-navegacionPropiedadesCSS {
