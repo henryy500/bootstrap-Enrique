@@ -22049,6 +22049,7 @@ th, td {
 
 @media (max-width: 768px) {
   #tablaUsuarios {
+    width: 200px;
     max-width: 500px;
   }
 }
