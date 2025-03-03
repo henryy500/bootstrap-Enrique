@@ -1032,7 +1032,7 @@ $font-family: Arial, sans-serif;
 
 .menu-icono{
   width: 100%;
- 
+  
 }
 
 // Menu de navegación
@@ -1045,7 +1045,6 @@ $font-family: Arial, sans-serif;
   background-color: map-get($color-MenuNavegacion, primary);
   padding:$paddingMenuNavegacion2;
   position:fixed;
-  top:0;
   
   
 
@@ -1239,6 +1238,7 @@ $font-family: Arial, sans-serif;
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
+
 
 //Estilo para la seccion de mas informacion
 .mas-informacion{
