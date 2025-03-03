@@ -21996,6 +21996,7 @@ th, td {
   border: 2px solid #ccc;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 .estadisticas .estadisticas1.estadisticas1:hover, .estadisticas .estadisticas2.estadisticas1:hover, .estadisticas .estadisticas3.estadisticas1:hover, .estadisticas .estadisticas4.estadisticas1:hover {
   opacity: 0.9;

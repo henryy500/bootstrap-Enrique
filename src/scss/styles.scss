@@ -78,6 +78,7 @@ $color-caja2-admin:#87CEEB;
 $color-caja3-admin:#00FF00;
 $color-caja4-admin: yellow;  
 $grayscale-caja4-admin: grayscale($color-caja4-admin);
+$padding-cajas-admin:20px;
 $sombra-cajas-admin:rgba(0, 0, 0, 0.1);
 
 .estadisticas{
@@ -85,11 +86,13 @@ $sombra-cajas-admin:rgba(0, 0, 0, 0.1);
   display:flex;
   flex-direction:column;
   gap:20px;
+  
 
 .estadisticas1, .estadisticas2, .estadisticas3, .estadisticas4{
   border:2px solid $border-color-admin;
   border-radius:$border-radius-admin;
   box-shadow:$sombra-cajas-admin;
+  padding:$padding-cajas-admin;
   
   &.estadisticas1:hover{
     opacity:0.9;
