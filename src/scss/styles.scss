@@ -1012,10 +1012,10 @@ $color-frase-footer:white;
 $color-enlaces-footer:orange;
 $color-hover-enlaces-footer:blue;
 $color-active-enlaces-footer:gray;
-$colorTitulos:black;
+$colorTitulos:white;
 $color-textoPropiedades:white;
 $color-textoPropiedades: #555; 
-$colorTitulos: #333; 
+$colorTitulos: black; 
 $border-color: #ddd; 
 $border-radius: 10px; 
 $color-background: linear-gradient(45deg, #ff7e5f, #feb47b); // Gradiente
@@ -1028,6 +1028,22 @@ $paddingMenuNavegacion2:20px 20px;
 $paddingFooter:20px;
 $background-colorBoton:green;
 $font-family: Arial, sans-serif;
+
+//Función específica para la tercera seccion
+@function generate-color($hue, $saturation, $lightness) {
+  @return hsl($hue, $saturation, $lightness);
+}
+
+$seccion3-color-publicacion2: #66ff66; 
+$nuevo-color-generado-seccion3: generate-color(45, 100%, 60%);
+
+//Función específica para la cuarta seccion
+@function generate-color($r, $g, $b) {
+  @return rgb($r, $g, $b);
+}
+
+$primary-color: #33cc99; // Un tono de verde fresco
+$nuevo-color-seccion4: generate-color(51, 153, 255);
 
 //Menu de navegacion
 .menu-icono{
@@ -1092,7 +1108,7 @@ $font-family: Arial, sans-serif;
 // Propiedades generales para la sección
 // Propiedades generales para la sección
 .propiedades-background {
-  background: $color-background; // Mantener el gradiente de fondo
+  background: linear-gradient(135deg, $primary-color, $nuevo-color-generado-seccion3); // Mantener el gradiente de fondo
   padding: 4em;
   color: $color-textoPropiedades;
   
@@ -1140,7 +1156,7 @@ $font-family: Arial, sans-serif;
 //Establecemos el color de fondo, en este caso, será otro gradiente  de la seccion objects
 .titulo-propiedades-objects{
   width:100%;
-  background: linear-gradient(135deg, #66ff66, #ffcc00);
+  background: linear-gradient(135deg, $primary-color, $nuevo-color-seccion4);
   padding:4em;
 
 
@@ -1308,6 +1324,11 @@ $font-family: Arial, sans-serif;
 //Ajustamos el tamaño de la fuente
 .titulo-propiedadesCSS p, .propiedades-background p, .titulo-propiedades-objects p, .object-fit ul li, .mas-informacion p{
   font-size:1.2rem;
+}
+
+//Le ajustamos el color de la primera frase con la seccion
+.propiedades-background p{
+  color:black;
 }
 
 //Estilizamos el boton

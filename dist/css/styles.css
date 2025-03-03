@@ -22771,12 +22771,12 @@ input:focus {
 }
 
 .propiedades-background {
-  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  background: linear-gradient(135deg, #33cc99, hsl(45, 100%, 60%));
   padding: 4em;
   color: #555;
 }
 .propiedades-background h1, .propiedades-background .h1, .propiedades-background h2, .propiedades-background .h2, .propiedades-background h3, .propiedades-background .h3 {
-  color: #333;
+  color: black;
   font-weight: bold;
 }
 .propiedades-background .tipos-background {
@@ -22809,7 +22809,7 @@ input:focus {
 
 .titulo-propiedades-objects {
   width: 100%;
-  background: linear-gradient(135deg, #66ff66, #ffcc00);
+  background: linear-gradient(135deg, #33cc99, rgb(51, 153, 255));
   padding: 4em;
 }
 
@@ -22958,6 +22958,10 @@ input:focus {
 
 .titulo-propiedadesCSS p, .propiedades-background p, .titulo-propiedades-objects p, .object-fit ul li, .mas-informacion p {
   font-size: 1.2rem;
+}
+
+.propiedades-background p {
+  color: black;
 }
 
 .boton-admin2 {
