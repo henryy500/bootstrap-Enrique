@@ -22030,6 +22030,10 @@ th, td {
   background-color: gray;
 }
 
+.estadisticas1 p, .estadisticas2 p, .estadisticas3 p, .estadisticas4 p {
+  font-size: 1.2rem;
+}
+
 .titulo-listaUsuarios {
   margin-top: 20px;
 }

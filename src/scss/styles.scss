@@ -130,6 +130,11 @@ $sombra-cajas-admin:rgba(0, 0, 0, 0.1);
   background-color: $grayscale-caja4-admin;
 }
 
+//Ajustamos el tamaño de las estadisticas correspondientes
+.estadisticas1 p, .estadisticas2 p, .estadisticas3 p, .estadisticas4 p{
+  font-size:1.2rem;
+}
+
 //Vamos a separar el titulo listado de usuarios de los botones y la tabla para centrar el contenido
 .titulo-listaUsuarios{
   margin-top:20px;
