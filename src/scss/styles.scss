@@ -66,6 +66,70 @@ th,td{
     
 }
 
+//Admin
+//Variables que voy a utilizar para el admin
+$primary-color: #3498db;
+$admin-color: #f4f4f4;
+$estadisticas-bg-color: #fff;
+$border-color-admin: #ccc;
+$border-radius-admin:10px;
+$background-color-caja1-admin:orange;
+$color-caja2-admin:#87CEEB;
+$color-caja3-admin:#00FF00;
+$color-caja4-admin: yellow;  
+$grayscale-caja4-admin: grayscale($color-caja4-admin);
+$sombra-cajas-admin:rgba(0, 0, 0, 0.1);
+
+.estadisticas{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+
+.estadisticas1, .estadisticas2, .estadisticas3, .estadisticas4{
+  border:2px solid $border-color-admin;
+  border-radius:$border-radius-admin;
+  box-shadow:$sombra-cajas-admin;
+  
+  &.estadisticas1:hover{
+    opacity:0.9;
+    transform:scale(0.95);
+  }
+
+  &.estadisticas2:hover{
+    opacity:0.9;
+    transform:scale(0.95);
+  }
+
+  &.estadisticas3:hover{
+    opacity:0.9;
+    transform:scale(0.95);
+  }
+
+  &.estadisticas4:hover{
+   opacity:0.9;
+   transform:scale(0.95);
+    
+  }
+}
+}
+
+.estadisticas1{
+  background-color:lighten($background-color-caja1-admin,10%);
+}
+
+.estadisticas2{
+  background-color:$color-caja2-admin;
+}
+
+.estadisticas3{
+  background-color: darken($color-caja3-admin,20%);
+}
+
+.estadisticas4{
+  background-color: $grayscale-caja4-admin;
+}
+
 //Vamos a separar el titulo listado de usuarios de los botones y la tabla para centrar el contenido
 .titulo-listaUsuarios{
   margin-top:20px;
@@ -392,7 +456,7 @@ $color-hover: darken($color-listaEnriquePublicaciones, 10%);
 $color-fondo-seccionDatos: rgba(255, 255, 255, 0.8); 
 $color-texto: #444; 
 $color-blanco: #ffffff; 
-$color-celdas: #f5f5f5; 
+$color-celdas-tablapublicacionesUsuario: #f5f5f5; 
 $border-radius: 15px; 
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 $padding-top-listadoEnriquePublicaciones: 2em; 
@@ -457,7 +521,7 @@ $margin-bottom: 2em;
     }
 
     td {
-      background-color: $color-celdas; 
+      background-color: $color-celdas-tablapublicacionesUsuario; 
       color: #333;
     }
   }

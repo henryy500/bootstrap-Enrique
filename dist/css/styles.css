@@ -21986,6 +21986,50 @@ th, td {
   border: 2px solid black;
 }
 
+.estadisticas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.estadisticas .estadisticas1, .estadisticas .estadisticas2, .estadisticas .estadisticas3, .estadisticas .estadisticas4 {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1);
+}
+.estadisticas .estadisticas1.estadisticas1:hover, .estadisticas .estadisticas2.estadisticas1:hover, .estadisticas .estadisticas3.estadisticas1:hover, .estadisticas .estadisticas4.estadisticas1:hover {
+  opacity: 0.9;
+  transform: scale(0.95);
+}
+.estadisticas .estadisticas1.estadisticas2:hover, .estadisticas .estadisticas2.estadisticas2:hover, .estadisticas .estadisticas3.estadisticas2:hover, .estadisticas .estadisticas4.estadisticas2:hover {
+  opacity: 0.9;
+  transform: scale(0.95);
+}
+.estadisticas .estadisticas1.estadisticas3:hover, .estadisticas .estadisticas2.estadisticas3:hover, .estadisticas .estadisticas3.estadisticas3:hover, .estadisticas .estadisticas4.estadisticas3:hover {
+  opacity: 0.9;
+  transform: scale(0.95);
+}
+.estadisticas .estadisticas1.estadisticas4:hover, .estadisticas .estadisticas2.estadisticas4:hover, .estadisticas .estadisticas3.estadisticas4:hover, .estadisticas .estadisticas4.estadisticas4:hover {
+  opacity: 0.9;
+  transform: scale(0.95);
+}
+
+.estadisticas1 {
+  background-color: #ffb733;
+}
+
+.estadisticas2 {
+  background-color: #87CEEB;
+}
+
+.estadisticas3 {
+  background-color: #009900;
+}
+
+.estadisticas4 {
+  background-color: gray;
+}
+
 .titulo-listaUsuarios {
   margin-top: 20px;
 }
