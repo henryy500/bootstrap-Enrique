@@ -158,8 +158,8 @@ $sombra-cajas-admin:rgba(0, 0, 0, 0.1);
 //Lo ajustamos para pantallas mas pequeñas
 @media(max-width:768px){
   #tablaUsuarios{
-    width:200px;
-    max-width:500px;
+    width:100vw;
+    max-width:400px;
   }
 }
 

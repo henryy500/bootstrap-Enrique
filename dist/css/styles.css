@@ -22049,8 +22049,8 @@ th, td {
 
 @media (max-width: 768px) {
   #tablaUsuarios {
-    width: 200px;
-    max-width: 500px;
+    width: 100vw;
+    max-width: 400px;
   }
 }
 .publicacion1, .publicacion2, .publicacion3, .detallenoDisponible1, .detallenoDisponible2 {
