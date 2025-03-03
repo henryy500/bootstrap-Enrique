@@ -23279,6 +23279,12 @@ input:focus {
   .titulo-propiedadesCSS {
     text-align: center;
   }
+  .imagen-objectFit {
+    z-index: -2;
+  }
+  .imagen-objectFit2 {
+    z-index: -2;
+  }
   .frase-footer {
     text-align: center;
   }

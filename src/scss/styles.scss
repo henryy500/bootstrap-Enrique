@@ -1014,10 +1014,10 @@ $color-hover-enlaces-footer:blue;
 $color-active-enlaces-footer:gray;
 $colorTitulos:black;
 $color-textoPropiedades:white;
-$color-textoPropiedades: #555; // Color del texto en la sección
-$colorTitulos: #333; // Color de los títulos
-$border-color: #ddd; // Color del borde
-$border-radius: 10px; // Radio de los bordes
+$color-textoPropiedades: #555; 
+$colorTitulos: #333; 
+$border-color: #ddd; 
+$border-radius: 10px; 
 $color-background: linear-gradient(45deg, #ff7e5f, #feb47b); // Gradiente
 $border-color: #000;
 $color-botonA:white;
@@ -1721,6 +1721,14 @@ $padding-secciones:40px;
 
   .titulo-propiedadesCSS{
     text-align:center;
+  }
+
+  .imagen-objectFit{
+    z-index:-2;
+  }
+
+  .imagen-objectFit2{
+    z-index:-2;
   }
   
   //Seccion footer
