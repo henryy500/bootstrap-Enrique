@@ -138,12 +138,18 @@ $sombra-cajas-admin:rgba(0, 0, 0, 0.1);
   font-size:1.2rem;
 }
 
-//Vamos a separar el titulo listado de usuarios de los botones y la tabla para centrar el contenido
+//Vamos a separar el titulo listado de usuarios de los botones y la tabla y centramos el contenido de las dos tablas
 .titulo-listaUsuarios{
   margin-top:20px;
 }
 
 #tablaUsuarios{
+  th, td{
+    text-align:center;
+  }
+}
+
+#tablaPublicaciones{
   th, td{
     text-align:center;
   }

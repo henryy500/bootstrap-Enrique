@@ -22043,6 +22043,10 @@ th, td {
   text-align: center;
 }
 
+#tablaPublicaciones th, #tablaPublicaciones td {
+  text-align: center;
+}
+
 .publicacion1, .publicacion2, .publicacion3, .detallenoDisponible1, .detallenoDisponible2 {
   padding: 10px 20px;
   font-size: 16px;
