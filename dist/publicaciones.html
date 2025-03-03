@@ -8,6 +8,7 @@
         <meta name="author" content="" />
         <title>Publicaciones</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
@@ -111,19 +112,19 @@
                         <div class="titulo-listaPublicaciones">
                             <h1>Listado de publicaciones</h1>
                         </div>
-                            
+                        
+                        
                             <div class="card-body">
-                                <table id="tablaPublicaciones">
+                                <div class="table-responsive">
+                                <table id="tablaPublicaciones" class="tablaPublicaciones">
                                     <thead>
                                         <tr>
                                             <th>Nombre</th>
                                             <th>Publicaciones</th>
                                             <th>Fecha</th>
                                             <th>Acciones</th>
-                                            
                                         </tr>
                                     </thead>
-                                    
                                     <tbody>
                                         <tr id="publicacion1">
                                             <td>Enrique</td>
@@ -131,22 +132,18 @@
                                             <td>España</td>
                                             <td>
                                                 <div class="acciones">
-                                                    
                                                     <a href="#" class="botonBloquear">Bloquear</a>
                                                     <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
                                                     <a href="visualizarEnrique.html" class="botonVisualizar">Visualizar</a>
                                                 </div>
                                             </td>
-                                            
                                         </tr>
-                                        
                                         <tr id="publicacion2">
                                             <td>Raul</td>
                                             <td>Alcaraz Hernandez</td>
                                             <td>megaraul2003@gmail.com</td>
                                             <td>
                                                 <div class="acciones">
-                                                    
                                                     <a href="#" class="botonBloquear">Bloquear</a>
                                                     <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
                                                     <a href="visualizarusuarioRaul.html" class="botonVisualizar">Visualizar</a>
@@ -159,22 +156,17 @@
                                             <td>Murcia</td>
                                             <td>
                                                 <div class="acciones">
-                                                    
                                                     <a href="#" class="botonBloquear">Bloquear</a>
                                                     <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
                                                     <a href="visualizarusuarioIvan.html" class="botonVisualizar">Visualizar</a>
                                                 </div>
                                             </td>
                                         </tr>
-                                        
-                                       
                                     </tbody>
                                 </table>
-                                
                             </div>
-                            
+                        </div>
                         
-                    </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
@@ -196,6 +188,9 @@
         <script src="js/datatables-simple-demo.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        
+
         <script> 
            $(document).ready(function() {
             // Función para bloquear una publicación

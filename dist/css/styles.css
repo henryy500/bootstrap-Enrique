@@ -22039,11 +22039,6 @@ th, td {
   margin-top: 20px;
 }
 
-.card-body {
-  width: 100%;
-  overflow-x: auto;
-}
-
 #tablaUsuarios {
   width: 100%;
   border-collapse: collapse;
@@ -22051,12 +22046,14 @@ th, td {
 #tablaUsuarios th, #tablaUsuarios td {
   text-align: center;
   font-size: 1.2rem;
-  padding: 0.3em 0.3em 0.3em 0.3em;
+}
+#tablaUsuarios th {
+  padding: 10px;
 }
 
 #tablaPublicaciones th, #tablaPublicaciones td {
+  padding: 0.6em 0.6em 0.6em 0.6em;
   text-align: center;
-  padding: 1em 1em 1em 1em;
 }
 
 .publicacion1, .publicacion2, .publicacion3, .detallenoDisponible1, .detallenoDisponible2 {

@@ -143,11 +143,7 @@ $sombra-cajas-admin:rgba(0, 0, 0, 0.1);
   margin-top:20px;
 }
 
-.card-body{
-  width:100%;
-  overflow-x:auto; //Esto lo que hace es que se pueda scrollear hacia la derecha la tabla y que no afecte tanto al diseño
-}
-
+//Alinemaos en el centro la informacion
 #tablaUsuarios{
   width:100%;
   border-collapse:collapse;
@@ -156,18 +152,22 @@ $sombra-cajas-admin:rgba(0, 0, 0, 0.1);
   th, td{
     text-align:center;
     font-size:1.2rem;
-    padding:0.3em 0.3em 0.3em 0.3em;
+  
+  }
+
+  th{
+    padding:10px;
   }
 }
 
+//Alineamos al centro la informacion y hacemos mas grande la tabla
 #tablaPublicaciones{
   th, td{
+    padding:0.6em 0.6em 0.6em 0.6em;
     text-align:center;
-    padding:1em 1em 1em 1em;
-    
   }
-  
 }
+
 
 //Estilos para el html de usuarios
 // Estilos de las publicaciones
