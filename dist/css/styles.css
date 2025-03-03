@@ -22051,10 +22051,12 @@ th, td {
 #tablaUsuarios th, #tablaUsuarios td {
   text-align: center;
   font-size: 1.2rem;
+  padding: 0.3em 0.3em 0.3em 0.3em;
 }
 
 #tablaPublicaciones th, #tablaPublicaciones td {
   text-align: center;
+  padding: 1em 1em 1em 1em;
 }
 
 .publicacion1, .publicacion2, .publicacion3, .detallenoDisponible1, .detallenoDisponible2 {
