@@ -22848,6 +22848,7 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
     width: 100%;
     height: 100vh;
     padding: 20px;
+    text-align: center;
   }
 }
 @media (max-width: 400px) {
