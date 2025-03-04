@@ -1232,7 +1232,7 @@ $padding-secciones:40px;
     align-items:center;
     justify-content:center;
     background-color: map-get($colores-filtros, primary);
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
