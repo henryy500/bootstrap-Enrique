@@ -705,10 +705,18 @@ header {
   
 }
 
+//Imagenes
 .imagenGif{
-  width:30vw;
-  height:30vh;
+  width:20vw;
+  height:20vh;
   background-image:url('../assets/formatogif.jpeg');
+  background-size:cover;
+}
+
+.imagenPng{
+  width:20vw;
+  height:20vw;
+  background-image:url('../assets/imagenpng.png');
   background-size:cover;
 }
 
