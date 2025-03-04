@@ -1221,12 +1221,12 @@ $padding-secciones:40px;
 //Añadimos menu hamburguesa para la publicacion 2
 @media(max-width:400px){
 
-  .menu-navegacionPropiedadesCSS nav{
+  .menu-icono nav{
     display:none;
   }
 
   //Lo distrubuimos para que las opciones del menu salgan en el centro y que el filtro ocupe toda la pantalla
-  .menu-navegacionPropiedadesCSS.open nav {
+  .menu-icono.open nav {
     display: flex; 
     flex-direction: column;
     align-items:center;
