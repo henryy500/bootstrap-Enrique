@@ -22833,15 +22833,11 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
 }
 
 @media (max-width: 400px) {
-  .nav nav {
+  .nav {
     display: none;
   }
-  .menu-hamburguesa {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-  }
   /* Cuando la clase 'open' se activa, se muestra el menú */
-  .nav.open nav {
+  .nav.open ul {
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9);

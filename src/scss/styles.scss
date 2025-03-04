@@ -1199,19 +1199,13 @@ $padding-secciones:40px;
 //Añadimos menu hamburguesa para la publicacion 2
 @media(max-width:400px){
 
-  .nav nav{
+  .nav {
     display: none;
     
   }
 
-  //Le ponemos una transicion bonita
-  .menu-hamburguesa {
-    display: flex; 
-    transition: transform 0.3s ease-in-out;
-  }
-
   /* Cuando la clase 'open' se activa, se muestra el menú */
-  .nav.open nav{
+  .nav.open ul{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9);
