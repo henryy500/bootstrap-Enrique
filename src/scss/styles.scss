@@ -339,37 +339,15 @@ $color-base: #3498db;
 $color-darker: darken($color-base, 15%);
 $color-boton: #3498db;
 $color-fondo: #f4f4f4;
+$color-label:#555;
 $color-boton-hover: #2980b9;
 $font-size: 1.2rem;
 $font-weight: bold;
 $border-radius: 10px;
 $padding-input: 15px;
-$form-background: #ecf0f1;
+$form-background: blue;
 
 //Seccion formularios
-// Diseño para los formularios
-.formulario {
-  width: 100%;
-  max-width: 600px;
-  background-color: $form-background;
-  border-radius: 10px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content:center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-  
-  
-  h1 {
-    font-size: 2rem;
-    font-weight: $font-weight;
-    color: $color-base;
-    margin-bottom: 20px;
-  }
-}
-
 // Estilo para el campo del formulario
 fieldset {
   width: 100%;
@@ -382,7 +360,6 @@ fieldset {
   flex-direction: column;
   align-items: center;
 }
-
 
 // Estilos para el campo de texto de los formularios
 .componente-texto-formulario {
@@ -405,13 +382,13 @@ fieldset {
 label {
   font-size: 1rem;
   font-weight: normal;
-  color: #555;
+  color: $color-label;
   margin-bottom: 5px;
   align-self: flex-start;
 }
 
 // Estilos para el botón de los formularios
-#btnAñadir,#btnEditar {
+#btnEditar {
   width: 100%;
   padding: 15px;
   font-size: 1.1rem;
@@ -433,17 +410,17 @@ label {
   }
 }
 
-// Estilos específicos para el campo de email y fecha de nacimiento
+//Estilos específicos para el campo de email y fecha de nacimiento
 input[type="email"], input[type="date"] {
   width: 100%;
 }
 
-// Para la segunda versión de formulario (editar usuario)
+//Para la segundo formulario (editar usuario)
 .formulario2 {
   background-color: lighten($color-base, 30%);
 }
 
-// Sombra suave para el campo del formulario cuando está enfocado
+//Sombra suave para el campo del formulario cuando está enfocado
 input:focus {
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.6);
 }
@@ -476,7 +453,7 @@ input:focus {
 }
 
 //Estilos para el nuevo html generado para ver los datos resumidos del usuario Enrique y ver su listado de publicaciones
-// Variables de colores (sin cambios, manteniendo los que ya tienes)
+// Variables de colores 
 $color-listaEnriquePublicaciones: #3498db; 
 $color-caja-dato1: #002a57; 
 $color-fondo-claro: #f5f5f5; 
@@ -650,384 +627,103 @@ $margin-bottom: 2em;
 //Va a ser importante tener el codigo organizado para estas tres publicaciones
 //Estilos para la primera publicacion (formatos de imágenes)
 // Variables para la primera publicacion
-$background-color: #f4f4f4;
-$primary-color: #333;
-$border-color: #000;
-$color-botonA:white;
-$border-radius: 8px;
-$hover-color: #575757;
-$paddingFormatosImagen:20px;
-$paddingbotonAdmin:10px 10px;
-$background-colorBoton:green;
-$font-family: Arial, sans-serif;
+// Definimos algunas variables de color
+$primary-color: #0d6efd;
+$secondary-color: #6c757d;
+$light-color-nav-link1: #f8f9fa;
+$dark-color: #212529;
+$card-tarjeta-publicacion1: #ffffff;
+$card-border-color-publicacion1: #e0e0e0;
 
-// Mixin para bordes
-@mixin border-style($color, $radius: $border-radius) {
-  border: 2px solid $color;
-  border-radius: $radius;
+// Estilos generales
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $light-color-nav-link1;
+  color: $dark-color;
 }
 
-// Estilo del menú de navegación
-.menu-navegacion {
+// Encabezado
+header {
   background-color: $primary-color;
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 40px;
-  position: relative; // Asegura que el menú se ajuste correctamente en pantallas más pequeñas
+  .menu-navegacion {
+    
+  .nav {
+  
+    .nav-link {
+
+    color: $light-color-nav-link1;
+
+      &.nav-link:hover {
+          color: #ffcc00;
+        }
+        }
+     }
+  }
 }
 
-// Estilo de los enlaces del menú
-.menu-navegacion ul li a {
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s;
+// Sección de tarjeta de la publicacion 1
+.card {
+  background-color: $card-tarjeta-publicacion1;
+  border: 1px solid $card-border-color-publicacion1;
+  border-radius: .375rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin-bottom: 1.5rem;
 
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .card-footer {
+    background-color: $light-color-nav-link1;
+    text-align: center;
+    padding: 0.75rem;
+  }
+}
+
+// Botones
+.btn-light {
+  background-color: $light-color-nav-link1;
+  color: $dark-color;
+  border: 1px solid $dark-color;
   &:hover {
-    background-color: $hover-color;
+    background-color: $dark-color;
+    color: $light-color-nav-link1;
   }
 }
 
-// Estilo del icono de publicación (se mantiene siempre visible)
-.menu-icono-publicacion1 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  background-color: $primary-color;
+// Imágenes para que se adapten a la pantalla
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
-// Estilo de la lista de navegación (flexbox y ajuste automático en pantallas pequeñas)
-.menu-navegacion ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap; 
-  max-width: 100%; 
-}
-
-// Estilo de cada elemento de la lista (espaciado entre los elementos del menú)
-.menu-navegacion ul li {
-  display: inline-block;
-  margin-right: 30px; 
-}
-
-// Estilos para el icono de publicación (si tienes una imagen de icono)
-.icono-publicacion1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    max-width: 100%;
-    height: auto;
+// Pie de página de la primera publlicacion
+#conclusion {
+  background-color: $dark-color;
+  color: $light-color-nav-link1;
+  padding: 2rem 0;
+  .container {
+    text-align: center;
   }
 }
-
-// Estilos para la imagen del icono de publicación (ajustable)
-.imagen-icono-publicacion1 {
-  width: 30px; 
-  height: 30px;
-}
-
-
-// Sección general
-.html-formatoImagenes {
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    padding:40px;
-    background-image: url('../assets/imagenfondopublicacion1.jpeg');
-    background-size: cover;
-    background-position: center; 
-    background-attachment: fixed;
-    margin-top:50px;
-    
-}
-
-  .html-formatoImagenes h1, h2 {
-    color: $primary-color;
-  }
-
-// Estilos para la seccion JPEG
-.jpg {
-    width:100%;
-    @include border-style($border-color); // Uso del mixin
-    display:flex;
-    padding:$paddingFormatosImagen;
-    
-}
-  .miImagenJPEG{
-    background-size: cover; 
-    background-position: center;
-    width:25vw;
-    height: 30vh;
-    filter: grayscale(100%);
-    transition: filter 1s;
-  }
-
-  .JPEG-texto{
-    width:50%;
-  }
-
-  .ejemplo-imagenjpg {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
-    &.jpg {
-      p {
-        margin-top: 10px;
-        color: $primary-color;
-      }
-    }
-  }
-  
-
-// Estilos para la seccion PNG
-.png {
-    width:100%;
-    @include border-style($border-color); // Uso del mixin
-    display:flex;
-    align-items:center;
-    padding:$paddingFormatosImagen;
-}
-
-.miImagenPNG{
-    background-image: url('/dist/visualizarPublicacion/imagenpng.png');
-    background-size: cover; 
-    background-position: center; 
-    width:25vw;
-    height: 30vh;
-    filter: grayscale(100%);
-    transition: filter 1s;
-  }
-
-  .png-texto{
-    width:50%;
-    display:flex;
-    flex-direction: column;
-    
-}
-
-  .ejemplo-png {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-    &.png {
-      p {
-        margin-top: 10px;
-        color: $primary-color;
-      }
-    }
-  }
-  
-// Estilos para la seccion GIF
-.gif {
-    width:100%;
-    @include border-style($border-color); // Uso del mixin
-    display:flex;
-    align-items:center;
-    padding:$paddingFormatosImagen;
-}
-  .miImagenGIF{
-    background-image: url('/dist/visualizarPublicacion/formatogif.jpeg');
-    background-size: cover; 
-    background-position: center; 
-    width:25vw;
-    height: 30vh;
-    filter: grayscale(100%);
-    transition: filter 1s;
-  }
-
-  .gif-texto{
-    width:50%;
-  }
-
-  .gif-imagen {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-    &.gif {
-      p {
-        margin-top: 10px;
-        color: $primary-color;
-      }
-    }
-  }
-  
-// Estilos para la seccion WEBP
-.webp {
-    width:100%;
-    @include border-style($border-color); // Uso del mixin
-    display:flex;
-    align-items:center;
-    padding:$paddingFormatosImagen;
-}
-  .ejemplo-imagenwebp {
-    background-image: url('/dist/visualizarPublicacion/imagenwebp.webp');
-    background-size: cover; 
-    background-position: center; 
-    width:25vw;
-    height: 30vh;
-    filter: grayscale(100%);
-    transition: filter 1s;
-  }
-
-  .webp-texto{
-    width:50%;
-  }
-
-  .ejemplo-webp {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  
-    &.webp {
-      p {
-        margin-top: 10px;
-        color: $primary-color;
-      }
-    }
-  }
-  
-//Alejamos un poco el texto ya que esta muy pegado al borde izquierdo de la caja
-  .JPEG-texto, .png-texto, .gif-texto, .webp-texto{
-    margin:2em;
-  }
-
-  .miImagenJPEG:hover, .miImagenPNG:hover, .miImagenGIF:hover, .ejemplo-imagenwebp:hover{
-    filter: grayscale(0%);
-  }
-
-
-// Estilos para la sección de la conclusión
-.conclusion {
-  background-color: #e8f5e9;
-  padding: 20px;
-  @include border-style($border-color);
-  
-}
-
-//Estilos para el boton que hace que vuelva al admin
-.boton-admin{
-  display:flex;
-  justify-content:end;
-  align-items:end;
-  margin-top:10px;
-}
-
-//Icono de la primera publicacion
-.icono-publicacion1{
-  background-color: $primary-color;
-  padding:5px 0 5px 40px;
-  
-}
-.imagen-icono-publicacion1{
-  background-image:url('/dist/visualizarPublicacion/icono-publicacion1.png');
-  background-size:cover;
-  background-position: center;
-  width:50px;
-  height:50px;
-  
-}
-
-//Boton
-.botonA{
-  padding:$paddingbotonAdmin;
-  border:2px solid black;
-  border-radius:$border-radius;
-  text-decoration:none;
-  background-color:$background-colorBoton;
-  color:$color-botonA;
-
-  &:hover{
-    color:$border-color;
-    transform:scale(1.1);
-
-  &:active{
-    color:$color-activo;
-  }
-  }
-}
-
-//Ajustamos el tamaño de la fuente del texto de esta publicacion
-.html-formatoImagenes p, .jpg ul li, .png ul li, .webp ul li, .gif ul li, .conclusion p{
-  font-size:1.2rem;
-}
-
-//Lo ajustamos para pantallas de 900px
-@media(max-width:900px){
-  .menu-navegacion ul li a{
-    font-size:13px;
-  }
-  .intro{
-    padding-top:55px;
-  }
-  .jpg, .png, .webp, .gif{
-    width:100%;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    
-  }
-  .miImagenJPEG, .miImagenPNG, .miImagenGIF, .ejemplo-imagenwebp{
-      width:50vw;
-    }
-
-  .boton-admin{
-      display:flex;
-      justify-content:center;
-    }
-
-    
-  }
 
 //Estilos para la segunda publicacion
 //Variables que vamos a necesitar para esta segunda publicacion
-//A todas o casi todas las variables para luego relaizar el map-get le he asignado el mismo valor primary
 $color-MenuNavegacion:(primary: #fce1e1);
-$color-titulosPropiedadesCSS:(primary:green);
 $color-masInformacion:(primary:black);
-$color-frase-footer:white;
 $color-enlaces-footer:orange;
-$color-hover-enlaces-footer:blue;
-$color-active-enlaces-footer:gray;
-$colorTitulos:white;
-$color-textoPropiedades:white;
-$color-textoPropiedades: #555; 
+$color-textoPropiedades: #555;
 $colorTitulos: black; 
-$border-color: #ddd; 
-$border-radius: 10px; 
-$color-background: linear-gradient(45deg, #ff7e5f, #feb47b); // Gradiente
-$border-color: #000;
-$color-botonA:white;
-$border-radius: 8px;
-$hover-color: #ff6347;
-$paddingbotonAdmin:10px 10px;
 $paddingMenuNavegacion2:20px 20px;
-$paddingFooter:20px;
-$background-colorBoton:green;
-$font-family: Arial, sans-serif;
 
 //Función específica para la tercera seccion
 @function generate-color($hue, $saturation, $lightness) {
@@ -1060,36 +756,11 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
   padding-right: 40px;  
   background-color: map-get($color-MenuNavegacion, primary);
   padding:$paddingMenuNavegacion2;
-  position:fixed;
+  position:sticky;
+  top:0;
   
-  
-
-  &.menu-navegacionPropiedadesCSS ul {
-    width:100%;
-    display: flex;
-    gap: 20px;  
-    list-style-type: none;
-    text-decoration: none;
-    justify-content: center;
-     
-  }
 }
 
-.menu-navegacionPropiedadesCSS nav{
-  display:flex;
-  justify-content: center;
-  align-items:center;
-}
-
-.menu-navegacionPropiedadesCSS ul li a {
-  text-decoration: none;
-  color: $border-color;
-  font-weight:bold;
-}
-
-.menu-navegacionPropiedadesCSS ul li a:hover {
-  color: $hover-color;
-}
 
 //Le ponemos un color de fondo y margenes a los titulos para diferenciarlos
 .titulo-propiedadesCSS{
@@ -1105,7 +776,7 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
     color:$color-textoPropiedades;
   }
 }
-// Propiedades generales para la sección
+
 // Propiedades generales para la sección
 .propiedades-background {
   background: linear-gradient(135deg, $primary-color, $nuevo-color-generado-seccion3); // Mantener el gradiente de fondo
@@ -1121,11 +792,10 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
   // Estilos generales para la caja de los tipos de background
   .tipos-background {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); //Ajusta las columnas según el espacio que haya disponible
+    display: flex;
     gap: 20px;
-    justify-items: center;
-    grid-auto-rows: minmax(200px, auto); //Asegura que las filas tengan un tamaño mínimo
+    justify-content: center;
+    
   }
 
   // Estilos generales para las cajas internas (background1, background2, etc.)
@@ -1133,7 +803,6 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
     width: 100%;
     max-width: 300px; 
     background-color: rgba(255, 255, 255, 0.9); 
-    @include border-style($border-color);
     padding: 20px;
     box-sizing: border-box;
     border-radius: $border-radius;
@@ -1158,43 +827,10 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
   width:100%;
   background: linear-gradient(135deg, $primary-color, $nuevo-color-seccion4);
   padding:4em;
-
+  
+  
 
 }
-
-//En esta seccion lo divideremos en dos columnas estas dos propiedades y separamos un poco cada caja para que no se vea todo tan pegado
-.objects-cajas{
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px; 
-  justify-items: center;
-  align-items: start; 
- 
-
-  &.objects-cajas .object-fit{
-    width: 100%;
-    max-width: 400px; 
-    min-height: 200px; 
-    padding: 20px;
-    box-sizing: border-box; 
-    border-radius: 10px;
-    @include border-style($border-color);
-  }
-
-  &.objects-cajas .object-position{
-    width: 100%;
-    max-width: 400px; 
-    min-height: 200px; 
-    padding: 20px;
-    box-sizing: border-box; 
-    border-radius: 10px;
-    @include border-style($border-color);
-  }
-}
-
-
-
 .objects-cajas .object-fit h3, .objects-cajas .object-position h3 {
   font-size: 1.2rem;
   margin-bottom: 15px; 
@@ -1203,11 +839,19 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
 
 .objects-cajas .object-fit p, .objects-cajas .object-position p {
   font-size: 1rem;
-  line-height: 1.5;
   color: #555;
   margin-bottom: 15px; 
 }
 
+.object-position{
+  border:2px solid gray;
+  border-radius:$border-radius;
+  padding:20px;
+}
+
+.object-fit{
+  @extend .object-position;
+}
 // Estilos para las imágenes 
 .imagen-objectFit {
   width: 100%;
@@ -1239,103 +883,18 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
   }
 }
 
-
-//Estilos para los titulos
-.titulo-propiedades-objects h1, .titulo-propiedades-objects h2, .object-fit h3, .object-position h3 {
-  font-weight: bold;
+#mas-informacion{
+  background-color:map-get($color-masInformacion,primary);
 }
 
-.object-fit h1, .object-position h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.object-fit h2, .object-position h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-
-//Estilo para la seccion de mas informacion
-.mas-informacion{
-  background-color:map-get($color-masInformacion, primary);
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 
-  'item1 item1'
-  'item2 item2';
-  justify-items:center;
-  padding:$paddingFooter;
-}
-
-.frase-footer {
-  grid-area:item1;
-}
-
-.enlaces-footer{
-  grid-area:item2;
-  text-align:center;
-}
-
-//Color de la frase principal del footer
-.mas-informacion p{
-  color:$color-frase-footer;
-  font-size:20px;
-  font-weight:bold;
-}
-
-.enlaces-footer ul li{
-  list-style-type: none;
+.frase-footer p{
+  color:white;
 }
 
 .enlaces-footer a{
   text-decoration:none;
   color:$color-enlaces-footer;
   font-size:16px;
-}
-
-.enlaces-footer a:hover{
-    color:$color-hover-enlaces-footer;
-    transform:scale(1.1);
-  }
-
-.enlaces-footer a:active{
-  color:$color-active-enlaces-footer;
-}
-
-//Icono
-.icono{
-  width:100%;
-  
-}
-
-.imagen-icono {
-  width:50px;
-  height:50px;
-  background-image: url('../assets/iconocss.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px; 
-  z-index:2;
-  transform: translateY(10px);
-  margin-left:50px;
-}
-
-//Ajustamos el tamaño de la fuente
-.titulo-propiedadesCSS p, .propiedades-background p, .titulo-propiedades-objects p, .object-fit ul li, .mas-informacion p{
-  font-size:1.2rem;
-}
-
-//Le ajustamos el color de la primera frase con la seccion
-.propiedades-background p{
-  color:black;
-}
-
-//Estilizamos el boton
-.boton-admin2{
-  display:flex;
-  justify-content:end;
-  background-color:map-get($color-masInformacion, primary);
 }
 
 //Lo ajustamos para pantallas más pequeñas
@@ -1346,31 +905,12 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
    text-align:center;
    
   }
-
-  .titulo-propiedadesCSS{
-    text-align:center;
-  }
-  .tipos-background{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    
-    margin:2em;
-  }
-
+  
   .objects-cajas{
     display:flex;
     flex-direction:column;
     align-items:center;
     margin:2em;
-  }
-
-  .boton-admin2{
-    display:flex;
-    justify-content:center;
-  }
-  .frase-footer{
-    text-align:center;
   }
 }
 
@@ -1379,11 +919,10 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
 $color-menuNavegacion3:#3498db;
 $color-seccion-intro:(primary: #ffeb3b);
 $color-seccion-ejemplo:(primary:gray);
-$color-texto-menu-navegacion3:gray;
 $color-texto-hover-menuNavegacion3:#e74c3c;
 $color-seccionFooter:#16a085;
 $color-seccionFooter2:#ecf0f1;
-$colores-filtros:(primary:#4CAF50); 
+$colores-filtros:(primary:#4CAF50);
 $border-color-seccion-caja1:#1f3a56;
 $padding-menuNavegacion3:20px 10px;
 $padding-secciones:40px;
@@ -1418,8 +957,6 @@ $padding-secciones:40px;
 }
 
 .menu-navegacion3 a{
-  color: white; 
-  text-decoration: none;
   padding: 10px 20px;
   margin: 0 15px;
 }
@@ -1467,17 +1004,6 @@ $padding-secciones:40px;
   justify-items:center;
   align-items:center;
   
-}
-
-//Establecemos un 50 por ciento en cada caja
-.ejemplo-frase{
-  width:50%;
-  
-}
-
-//Heredamos los valores de la clase .ejemplo-frase
-.img-container-ejemplo{
-  @extend .ejemplo-frase;
 }
 
 //Estilos para la imagen, le añadimos un filtro que cambia el brillo y la saturacion al pasar el cursor sobre ella
@@ -1548,10 +1074,6 @@ $padding-secciones:40px;
   text-transform:uppercase;
 }
 
-//Hacemos los titulos mas grandes de las cajas de texto
-.controlador-propiedades strong{
-  font-size:25px;
-}
 
 .menu-navegacion3 a, .titulo-filtros-publicacion3 p, .container-intro p, .ejemplo-frase p, .container-propiedades p{
   font-size:1.5rem;
@@ -1569,21 +1091,8 @@ $padding-secciones:40px;
   @include box-shadow(0, 4px, 6px, rgba(0, 0, 0, 0.1));
 }
 
-//Titulo del footer que es conclusiones en mayusculas
-.container h2{
-  font-weight:bold;
-  text-transform:uppercase;
-}
-
 .container p{
   font-size:1.5rem;
-}
-
-.boton-admin3{
-  display:flex;
-  justify-content:end;
-  background-color: mix($color-seccionFooter, $color-seccionFooter2, 40%);
-
 }
 
 //Icono publicacion 3

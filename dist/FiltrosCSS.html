@@ -8,56 +8,73 @@
 </head>
 <body>
 
-<header>
+<header class="card-header">
     
     <div class="menu-icono-publicacion3">
-        
-    <div class="menu-navegacion3">
-        <nav>
-            <a href="#intro">Introducción</a>
-            <a href="#ejemplo">Ejemplo</a>
-            <a href="#propiedades">Propiedades</a>
-            <a href="#conclusiones">Conclusiones</a>
-        </nav>
-        <div class="menu-hamburguesa" onclick="toggleMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-        </div>
+    
+                <div class="menu-navegacion3">
+                    <nav>
+                        <ul class="nav">
+                            <li class="nav-item"><a class="nav-link text-white" href="#intro">Introduccion</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#ejemplo">Ejemplo</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#propiedades">Propiedades de los filtros CSS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#conclusiones">Conclusiones</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-hamburguesa" onclick="toggleMenu()">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
     
     <div class="icono-publicacion3">
         <img class="imagen-iconopublicacion3"/>
     </div>
-  </div>
+  
    
 </header>
 <main>
-    <div class="titulo-filtros-publicacion3">
-        <h1>Filtros en CSS</h1>
-        <p>Cómo cambiar el brillo, color y saturación de una imagen usando CSS</p>
-    </div>
+    <section class="card mb-4">
+        
+            <div class="titulo-filtros-publicacion3">
+            <h1 class="card-title">Filtros en CSS</h1>
+            <p class="card-text">Cómo cambiar el brillo, color y saturación de una imagen usando CSS</p>
+        </div>
+     
+    </section>
 
-<div class="container-intro" id="intro">
-    <h2>Introducción</h2>
-    <p>En CSS, los filtros permiten aplicar efectos visuales a imágenes, como cambios en el brillo, la saturación y el contraste. Los filtros son muy útiles para darle estilo a las imágenes sin necesidad de usar software externo.</p>
-</div>
+<section class="card mb-4">
+        <div class="card-body">
+            <div class="container-intro" id="intro">
+                 <h2 class="card-title">Introducción</h2>
+                <p class="card-text">En CSS, los filtros permiten aplicar efectos visuales a imágenes, como cambios en el brillo, la saturación y el contraste. Los filtros son muy útiles para darle estilo a las imágenes sin necesidad de usar software externo.</p>
+            </div>
+        </div>
+</section>
 
-<div class="container-ejemplo" id="ejemplo">
-    <div class="ejemplo-frase">
-    <h2>Ejemplo</h2>
-    <p>A continuación se muestra una imagen con un filtro aplicado que cambia el brillo y la saturación al pasar el cursor sobre ella:</p>
+<section class="card mb-4">
+    <div class="card-body">
+        <div class="container-ejemplo" id="ejemplo">
+             <div class="col-md-6">
+                <h2 class="card-title">Ejemplo</h2>
+                 <p class="card-text">A continuación se muestra una imagen con un filtro aplicado que cambia el brillo y la saturación al pasar el cursor sobre ella:</p>
+        </div>
+        <div class="col-md-6">
+            <img class="image-ejemplo"/>
+        </div>
     </div>
-    <div class="img-container-ejemplo">
-        <img class="image-ejemplo"/>
     </div>
-</div>
-
+</section>
+<section class="card mb-4">
+    <div class="card-body">
 <div class="container-propiedades" id="propiedades">
     <h2>Propiedades de los Filtros CSS</h2>
     <p>CSS ofrece varias propiedades para modificar los efectos visuales de las imágenes. A continuación, te mostramos algunas de ellas:</p>
     <div class="controlador-propiedades">
-    <div class="propiedades-caja1">
+        
+    <div class="card">
+        
         <ul>
             <li>
                 <strong>brightness()</strong>: 
@@ -67,7 +84,7 @@
             </li>
         </ul>
     </div>
-    <div class="propiedades-caja2">
+    <div class="card">
         <ul>
             <li>
                 <strong>saturate()</strong>: 
@@ -77,7 +94,7 @@
             </li>
         </ul>
     </div>
-    <div class="propiedades-caja3">
+    <div class="card">
         <ul>
             <li>
                 <strong>contrast()</strong>: 
@@ -87,7 +104,7 @@
             </li>
         </ul>
     </div>
-    <div class="propiedades-caja4">
+    <div class="card">
         <ul>
             <li>
                 <strong>blur()</strong>: 
@@ -97,7 +114,7 @@
             </li>
         </ul>
     </div>
-    <div class="propiedades-caja5">
+    <div class="card">
         <ul>
             <li>
                 <strong>grayscale()</strong>: 
@@ -107,7 +124,7 @@
             </li>
         </ul>
     </div>
-    <div class="propiedades-caja6">
+    <div class="card">
         <ul>
             <li>
                 <strong>hue-rotate()</strong>: 
@@ -120,17 +137,24 @@
        
     </div>
 </div>
+</div>
+</section>
 </main>
-<footer>
+
+<footer class="card-footer">
+    <section class="card mb-4">
+        <div class="card-body">
 <div class="seccion-container-publicacion3">
     <div class="container" id="conclusiones">
-        <h2>Conclusiones</h2>
+        <h2 class="card-title">Conclusiones</h2>
         <p>Los filtros en CSS son una herramienta poderosa y fácil de usar para mejorar la presentación de imágenes en la web. Puedes cambiar el brillo, la saturación, el contraste, la opacidad y más sin complicaciones.</p>
     </div>
 </div>
-<div class="boton-admin3">
-    <a href="index.html" class="botonA">Pulsa aqui para volver al admin</a>
+<div class="alert alert-success">
+    <a href="index.html" class="btn btn-outline-primary">Pulsa aqui para volver al admin</a>
 </div>
+</div>
+</section>
 </footer>
 <script>
     function toggleMenu() {
