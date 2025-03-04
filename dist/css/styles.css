@@ -22850,10 +22850,17 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
   /* Cuando la clase 'open' se activa, se muestra el menú */
   .nav.open {
     display: flex;
-  }
-  /* Mostrar el icono de hamburguesa */
-  .menu-hamburguesa {
-    display: block;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    padding: 20px;
   }
   /* Separar los elementos dentro del menú */
   .nav-item {
