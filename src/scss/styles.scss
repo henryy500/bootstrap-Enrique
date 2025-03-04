@@ -742,6 +742,7 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
 //Establecemos fondo de color del menu de navegacion
 .menu-icono{
   background-color: map-get($color-MenuNavegacion,primary);
+  
 }
 
 .imagen-iconoPublicacion2{
@@ -1172,7 +1173,6 @@ $padding-secciones:40px;
     height:100vh;
     padding: 20px;
 
-    
   }
 
   // Efecto de las líneas de la hamburguesa que se transforman en una cruz cuando le pulsas a las tres barritas
@@ -1199,49 +1199,26 @@ $padding-secciones:40px;
 //Añadimos menu hamburguesa para la publicacion 2
 @media(max-width:400px){
 
-  .menu-icono{
-    z-index:2;
-  }
   /* Menu oculto por defecto */
-#menu {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
+  .menu-icono nav {
+    display: none; 
+  }
+  .menu-icono.open nav{
+    display: flex; 
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    background-color: lighten(blue,20%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height:100vh;
+    padding: 20px;
+    z-index:2;
+  }  
 
-#menu.open {
-  display: flex;
-  flex-direction: column; /* Muestra las opciones en una columna */
-  justify-content: center; /* Centra las opciones verticalmente */
-  align-items: center; /* Centra las opciones horizontalmente */
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
-  z-index: 3;
-  overflow-y: auto;
-}
-
-/* Estilos para los enlaces del menú */
-#menu .nav-item {
-  margin: 10px 0;
-}
-
-#menu .nav-link {
-  color: white;
-  font-size: 1.5rem;
-  padding: 10px;
-  text-decoration: none;
-}
-
-#menu .nav-link:hover {
-  color: #ddd;
-}
-
-  
+ 
 }
 
 // Media Query para pantallas menores a 400px
