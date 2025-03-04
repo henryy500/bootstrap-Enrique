@@ -622,8 +622,6 @@ $margin-bottom: 2em;
   }
 }
 
-
-
 //Va a ser importante tener el codigo organizado para estas tres publicaciones
 //Estilos para la primera publicacion (formatos de imágenes)
 // Variables para la primera publicacion
@@ -889,6 +887,7 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
 
 .frase-footer p{
   color:white;
+  font-weight:$font-weight;
 }
 
 .enlaces-footer a{

@@ -22587,6 +22587,7 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
 
 .frase-footer p {
   color: white;
+  font-weight: bold;
 }
 
 .enlaces-footer a {
