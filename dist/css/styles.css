@@ -22470,6 +22470,13 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
   background-color: #fce1e1;
 }
 
+.imagen-iconoPublicacion2 {
+  background-image: url("../assets/iconocss.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}
+
 .titulo-propiedadesCSS {
   width: 100%;
   padding: 7.5em;
