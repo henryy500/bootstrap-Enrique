@@ -702,6 +702,14 @@ header {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  
+}
+
+.imagenGif{
+  width:30vw;
+  height:30vh;
+  background-image:url('../assets/formatogif.jpeg');
+  background-size:cover;
 }
 
 // Pie de página de la primera publlicacion

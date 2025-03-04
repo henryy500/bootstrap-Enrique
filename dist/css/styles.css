@@ -22457,6 +22457,13 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
   height: auto;
 }
 
+.imagenGif {
+  width: 30vw;
+  height: 30vh;
+  background-image: url("../assets/formatogif.jpeg");
+  background-size: cover;
+}
+
 #conclusion {
   background-color: #212529;
   color: #f8f9fa;
