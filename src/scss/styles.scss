@@ -1199,6 +1199,9 @@ $padding-secciones:40px;
 //Añadimos menu hamburguesa para la publicacion 2
 @media(max-width:400px){
 
+  .menu-icono{
+    z-index:2;
+  }
   /* Menu oculto por defecto */
 #menu {
   display: flex;

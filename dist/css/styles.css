@@ -22833,6 +22833,9 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
 }
 
 @media (max-width: 400px) {
+  .menu-icono {
+    z-index: 2;
+  }
   /* Menu oculto por defecto */
   #menu {
     display: flex;
