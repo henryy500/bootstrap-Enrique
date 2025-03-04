@@ -22467,21 +22467,7 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
 }
 
 .menu-icono {
-  width: 100%;
-  position: fixed;
-  z-index: 2;
-}
-
-.menu-navegacionPropiedadesCSS {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 40px;
   background-color: #fce1e1;
-  padding: 20px 20px;
-  position: sticky;
-  top: 0;
 }
 
 .titulo-propiedadesCSS {
@@ -22516,7 +22502,6 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
   max-width: 300px;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
-  box-sizing: border-box;
   border-radius: 15px;
   transition: transform 0.3s ease;
 }

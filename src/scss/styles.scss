@@ -739,26 +739,10 @@ $nuevo-color-generado-seccion3: generate-color(45, 100%, 60%);
 $primary-color: #33cc99; // Un tono de verde fresco
 $nuevo-color-seccion4: generate-color(51, 153, 255);
 
-//Menu de navegacion
+//Establecemos fondo de color del menu de navegacion
 .menu-icono{
-  width: 100%;
-  position:fixed;
-  z-index:2;
+  background-color: map-get($color-MenuNavegacion,primary);
 }
-
-.menu-navegacionPropiedadesCSS {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;  
-  align-items: center;  
-  padding-right: 40px;  
-  background-color: map-get($color-MenuNavegacion, primary);
-  padding:$paddingMenuNavegacion2;
-  position:sticky;
-  top:0;
-  
-}
-
 
 //Le ponemos un color de fondo y margenes a los titulos para diferenciarlos
 .titulo-propiedadesCSS{
@@ -802,7 +786,6 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
     max-width: 300px; 
     background-color: rgba(255, 255, 255, 0.9); 
     padding: 20px;
-    box-sizing: border-box;
     border-radius: $border-radius;
     transition: transform 0.3s ease; 
 
@@ -826,8 +809,6 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
   background: linear-gradient(135deg, $primary-color, $nuevo-color-seccion4);
   padding:4em;
   
-  
-
 }
 .objects-cajas .object-fit h3, .objects-cajas .object-position h3 {
   font-size: 1.2rem;
