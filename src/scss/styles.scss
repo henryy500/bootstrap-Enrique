@@ -778,19 +778,14 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
     font-weight: bold;
   }
 
-  // Estilos generales para la caja de los tipos de background
-  .tipos-background {
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    
-  }
+ 
+  
 
   // Estilos generales para las cajas internas (background1, background2, etc.)
   .tipos-background .background1, .tipos-background .background2, .tipos-background .background3, .tipos-background .background4 {
     width: 100%;
-    max-width: 300px; 
+    max-width: 300px;
+    margin:10px;
     background-color: rgba(255, 255, 255, 0.9); 
     padding: 20px;
     border-radius: $border-radius;
@@ -882,23 +877,6 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
   text-decoration:none;
   color:$color-enlaces-footer;
   font-size:16px;
-}
-
-//Lo ajustamos para pantallas más pequeñas
-@media(max-width:900px){
-//Seccion menu de navegacion
-  .menu-navegacionPropiedadesCSS{
-   padding-left:80px;
-   text-align:center;
-   
-  }
-  
-  .objects-cajas{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin:2em;
-  }
 }
 
 //Ahora vamos con la tercera publicacion
@@ -1221,33 +1199,39 @@ $padding-secciones:40px;
 //Añadimos menu hamburguesa para la publicacion 2
 @media(max-width:400px){
 
-  .menu-icono nav{
-    display:none;
-  }
-
-  //Lo distrubuimos para que las opciones del menu salgan en el centro y que el filtro ocupe toda la pantalla
-  .menu-icono.open nav {
-    display: flex; 
+  .nav {
+    display: none;
     flex-direction: column;
-    align-items:center;
-    justify-content:center;
-    background-color: map-get($colores-filtros, primary);
+    background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%;
-    height:100vh;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
     padding: 20px;
   }
 
-  .titulo-propiedadesCSS{
-    text-align:center;
+  /* Cuando la clase 'open' se activa, se muestra el menú */
+  .nav.open {
+    display: flex;
   }
 
-  
-  //Seccion footer
-  .frase-footer{
-    text-align:center;
+  /* Mostrar el icono de hamburguesa */
+  .menu-hamburguesa {
+    display: block;
+  }
+
+  /* Separar los elementos dentro del menú */
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .nav-link {
+    font-size: 24px;
+    color: #fff;
   }
 }
 

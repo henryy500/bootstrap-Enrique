@@ -11,7 +11,7 @@
 </head>
 <body>
   <header>
-    <div class="menu-icono p-3 d-flex justify-content-between align-items-center position-fixed top-0 start-0 w-100">
+    <div class="menu-icono p-3 d-flex justify-content-between align-items-center position-fixed top-0 start-0 w-100 zindex -2">
       
       
       <div class="imagen-iconoPublicacion2 mx-auto">
@@ -19,7 +19,7 @@
       </div>
   
       
-      <div class="mx-auto"> 
+      <div class="mx-auto">
         
           <nav>
             <ul class="nav">
@@ -50,7 +50,7 @@
         <div class="propiedades-background">
             <h2>1. Propiedades CSS para Imágenes de Fondo</h2>
             <p>Las propiedades relacionadas con las imágenes de fondo permiten manipular cómo se posicionan, dimensionan y comportan las imágenes en el fondo de un elemento. Estas son algunas de las propiedades más comunes:</p>
-            <div class="tipos-background row">
+            <div class="tipos-background row justify-content-center">
                 <div class="background1 col-md-6">
                     <h3>background-image</h3>
                     <p>La propiedad background-image permite establecer una imagen de fondo para un elemento. Aquí tienes un ejemplo de cómo usarla:</p>
@@ -94,7 +94,7 @@
             <h2>2. Propiedades CSS para Objetos en Etiquetas &lt;img&gt;</h2>
             <p>También podemos cambiar la forma en la que se visualiza una imagen dentro de la etiqueta &lt;img&gt; usando las propiedades <code>object-fit</code> y <code>object-position</code>. Estas propiedades son útiles cuando trabajas con imágenes dentro de un contenedor con un tamaño específico.</p>
 
-            <div class="objects-cajas row">
+            <div class="d-flex gap-3">
                 <div class="object-fit col-md-6">
                     <h3>object-fit</h3>
                     <p>La propiedad object-fit controla cómo se ajusta una imagen dentro de su contenedor. Los valores más comunes son:</p>
@@ -137,14 +137,11 @@
 
 <script>
     function toggleMenu() {
-        const menu = document.querySelector('.nav');
-        const hamburger = document.querySelector('.menu-hamburguesa');
-        const imagenIcono = document.querySelector('.imagen-icono');  // Selecciona la imagen a ocultar
+    const menu = document.querySelector('.nav');
+    // Alterna la clase 'open' que controla si el menú está visible
+    menu.classList.toggle('open');
+}
 
-        menu.classList.toggle('open');
-        hamburger.classList.toggle('open');
-        imagenIcono.classList.toggle('hidden');
-    }
 </script>
 </body>
 </html>
