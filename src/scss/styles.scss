@@ -698,22 +698,46 @@ header {
   }
 }
 
-
+// Imágenes para que se adapten a la pantalla
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  
+}
 
 //Imagenes
+.imagenJPG{
+  width:30vw;
+  min-width:350px;
+  height:30vh;
+  background-image:url('../assets/images.jpeg');
+  background-size:cover;
+}
+
 .imagenGif{
   width:30vw;
+  min-width:350px;
   height:30vh;
   background-image:url('../assets/formatogif.jpeg');
   background-size:cover;
 }
 
 .imagenPng{
-  width:20vw;
-  height:20vh;
+  width:30vw;
+  min-width:350px;
+  height:30vh;
   background-image:url('../assets/imagenpng.png');
   background-size:cover;
 }
+
+.imagenWebp{
+  width:30vw;
+  min-width:350px;
+  height:30vh;
+  background-image:url('../assets/imagenwebp.webp');
+  background-size:cover;
+}
+
 
 // Pie de página de la primera publlicacion
 #conclusion {
