@@ -22460,22 +22460,22 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
 }
 
 .imagenGif {
-  width: 30vw;
-  height: 50vh;
+  width: 200px;
+  height: 200px;
   background-image: url("../assets/formatogif.jpeg");
   background-size: cover;
 }
 
 .imagenPng {
-  width: 50vw;
-  height: 50vh;
+  width: 200px;
+  height: 200px;
   background-image: url("../assets/imagenpng.png");
   background-size: cover;
 }
 
 .imagenWebp {
-  width: 50vw;
-  height: 50vh;
+  width: 200px;
+  height: 200px;
   background-image: url("../assets/imagenwebp.webp");
   background-size: cover;
 }
