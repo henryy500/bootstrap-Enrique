@@ -22878,16 +22878,16 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
   .menu-hamburguesa {
     display: block; /* Mostrar icono hamburguesa */
   }
-  .menu-navegacion1 nav {
+  .menu-navegacion-1 nav {
     display: none;
   }
-  .menu-navegacion1.open nav {
+  .menu-navegacion-1.open nav {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #666666;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;

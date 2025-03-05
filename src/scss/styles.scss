@@ -1259,19 +1259,19 @@ $padding-secciones:40px;
 
 
   // Inicialmente ocultar el menú
-  .menu-navegacion1 nav{
+  .menu-navegacion-1 nav{
     display: none;
     
   }
 
   // Mostrar el menú cuando se activa la clase "open"
-  .menu-navegacion1.open nav{
+  .menu-navegacion-1.open nav{
     display: flex; 
     flex-direction: column;
     align-items:center;
     justify-content:center;
     background-color: lighten(black,40%);
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
