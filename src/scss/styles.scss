@@ -1257,20 +1257,21 @@ $padding-secciones:40px;
     display: block; /* Mostrar icono hamburguesa */
   }
 
+
   // Inicialmente ocultar el menú
-  .menu-navegacion1 nav ul{
+  .menu-navegacion1 nav{
     display: none;
     
   }
 
   // Mostrar el menú cuando se activa la clase "open"
-  .menu-navegacion1.open nav ul{
+  .menu-navegacion1.open nav{
     display: flex; 
     flex-direction: column;
     align-items:center;
     justify-content:center;
     background-color: lighten(black,40%);
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
