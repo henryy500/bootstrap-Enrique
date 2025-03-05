@@ -1,60 +1,51 @@
-window.onload = function() {
-    // Obtener los usuarios del localStorage
-    const usuariosList = JSON.parse(localStorage.getItem('tablaUsuarios')) || [];
+document.getElementById('btnAniadir').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del botón (que es enviar el formulario)
 
-    // Acceder al cuerpo de la tabla
-    const usuariosBody = document.getElementById('usuarios-body');
+    // Obtener los valores de los campos del formulario
+    const nombre = document.getElementById('nombre').value.trim();
+    const apellidos = document.getElementById('apellidos').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const fechaNacimiento = document.getElementById('fecha-nacimiento').value.trim();
+    const pais = document.getElementById('pais').value.trim();
+    const ciudad = document.getElementById('ciudad').value.trim();
+    const contraseña = document.getElementById('contraseña').value.trim();
+    const repetirContraseña = document.getElementById('repetir-contraseña').value.trim();
 
-    // Insertar las filas de usuarios
-    usuariosList.forEach(function(usuario, index) {
-        const newRow = document.createElement('tr');
-        newRow.innerHTML = `
-            <td>${usuario.nombre}</td>
-            <td>${usuario.apellidos}</td>
-            <td>${usuario.email}</td>
-            <td>${usuario.fechaNacimiento}</td>
-            <td>${usuario.pais}</td>
-            <td>${usuario.ciudad}</td>
+    // Validaciones
+    if (!nombre || !email || !fechaNacimiento || !contraseña || !repetirContraseña) {
+        alert('Por favor, completa todos los campos obligatorios.');
+        return;
+    }
+
+    if (contraseña !== repetirContraseña) {
+        alert('Las contraseñas no coinciden.');
+        return;
+    }
+
+    // Crear el nuevo HTML para la fila de la tabla
+    const nuevaFila = `
+        <tr>
+            <td>${nombre}</td>
+            <td>${apellidos}</td>
+            <td>${email}</td>
+            <td>${fechaNacimiento}</td>
+            <td>${pais}</td>
+            <td>${ciudad}</td>
             <td>
                 <div class="acciones">
-                    <a href="#" class="botonBorrar" data-index="${index}">Borrar</a>
-                    <a href="#" class="botonBloquear">Bloquear</a>
-                    <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
-                    <a href="visualizarusuario${usuario.nombre}.html" class="botonVisualizar">Visualizar</a>
+                    <a href="#" class="botonBorrar" onclick="borrarUsuario(this)"><i class="bi bi-trash"></i></a>
+                    <a href="#" class="botonBloquear"><i class="bi bi-lock"></i></a>
+                    <a href="#" class="botonDesbloquear" style="display:none;"><i class="bi bi-lock-open"></i></a>
+                    <a href="visualizarusuario${nombre}.html" class="botonVisualizar"><i class="bi bi-eye"></i></a>
                 </div>
             </td>
-        `;
-        usuariosBody.appendChild(newRow);
-    });
+        </tr>
+    `;
 
-    // Añadir funcionalidad para borrar usuarios
-    const borrarLinks = document.querySelectorAll('.botonBorrar');
-    borrarLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            
-            // Preguntar al usuario si está seguro de querer borrar
-            const confirmDelete = confirm("¿Estás seguro de que deseas eliminar este usuario?");
-            
-            if (confirmDelete) {
-                // Obtener el índice del usuario a borrar desde el atributo data-index
-                const index = event.target.getAttribute('data-index');
-                
-                // Obtener la lista de usuarios del localStorage
-                let usuariosList = JSON.parse(localStorage.getItem('tablaUsuarios')) || [];
-                
-                // Eliminar el usuario del array
-                usuariosList.splice(index, 1); // Eliminar el usuario por índice
-                
-                // Guardar los usuarios actualizados en el localStorage
-                localStorage.setItem('tablaUsuarios', JSON.stringify(usuariosList));
+    // Añadir la nueva fila a la tabla
+    document.getElementById('usuarios-body').insertAdjacentHTML('beforeend', nuevaFila);
 
-                // Eliminar la fila de la tabla
-                event.target.closest('tr').remove();
-            } else {
-                // Si el usuario cancela, no hacer nada
-                console.log("Eliminación cancelada");
-            }
-        });
-    });
-}
+    // Limpiar el formulario después de añadir el usuario
+    document.querySelector('form').reset();
+    alert('Usuario añadido con éxito');
+});

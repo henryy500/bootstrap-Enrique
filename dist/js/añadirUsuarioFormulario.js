@@ -1,55 +1,57 @@
-document.getElementById('btnAñadir').addEventListener('click', function(event) {
-    event.preventDefault();
+document.getElementById('btnAniadir').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del botón (enviar el formulario)
 
-    // Capturar los valores del formulario
-    const nombre = document.getElementById('nombre').value;
-    const apellidos = document.getElementById('apellidos').value;
-    const email = document.getElementById('email').value;
-    const fechaNacimiento = document.getElementById('fecha-nacimiento').value;
-    const pais = document.getElementById('pais').value;
-    const ciudad = document.getElementById('ciudad').value;
+    // Obtener los valores de los campos del formulario
+    const nombre = document.getElementById('nombre').value.trim();
+    const apellidos = document.getElementById('apellidos').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const fechaNacimiento = document.getElementById('fecha-nacimiento').value.trim();
+    const pais = document.getElementById('pais').value.trim();
+    const ciudad = document.getElementById('ciudad').value.trim();
+    const contraseña = document.getElementById('contraseña').value.trim();
+    const repetirContraseña = document.getElementById('repetir-contraseña').value.trim();
 
-    // Verificar que los campos obligatorios no estén vacíos
-    if (nombre === '' || email === '' || fechaNacimiento === '') {
-        alert('Por favor, complete los campos obligatorios.');
+    // Validaciones
+    if (!nombre || !email || !fechaNacimiento || !contraseña || !repetirContraseña) {
+        alert('Por favor, completa todos los campos obligatorios.');
         return;
     }
 
-    // Crear una nueva fila para el usuario
-    const newRow = document.createElement('tr');
-    newRow.innerHTML = `
-        <td>${nombre}</td>
-        <td>${apellidos}</td>
-        <td>${email}</td>
-        <td>${fechaNacimiento}</td>
-        <td>${pais}</td>
-        <td>${ciudad}</td>
-        <td>
-            <div class="acciones">
-                <a href="#" class="botonBorrar">Borrar</a>
-                <a href="#" class="botonBloquear">Bloquear</a>
-                <a href="#" class="botonDesbloquear" style="display:none;">Desbloquear</a>
-                <a href="visualizarusuario${nombre}.html" class="botonVisualizar">Visualizar</a>
-            </div>
-        </td>
+    if (contraseña !== repetirContraseña) {
+        alert('Las contraseñas no coinciden.');
+        return;
+    }
+
+    // Crear el nuevo HTML para la fila de la tabla
+    const nuevaFila = `
+        <tr>
+            <td>${nombre}</td>
+            <td>${apellidos}</td>
+            <td>${email}</td>
+            <td>${fechaNacimiento}</td>
+            <td>${pais}</td>
+            <td>${ciudad}</td>
+            <td>
+                <div class="acciones">
+                    <a href="#" class="botonBorrar" onclick="borrarUsuario(this)"><i class="bi bi-trash"></i></a>
+                    <a href="#" class="botonBloquear"><i class="bi bi-lock"></i></a>
+                    <a href="#" class="botonDesbloquear" style="display:none;"><i class="bi bi-lock-open"></i></a>
+                    <a href="visualizarusuario${nombre}.html" class="botonVisualizar"><i class="bi bi-eye"></i></a>
+                </div>
+            </td>
+        </tr>
     `;
 
-    // Añadir la nueva fila al listado de usuarios en la otra página
-    // Aquí agregamos la fila en el localStorage (si es necesario) o bien puedes hacer que se agregue dinámicamente en usuarios.html
+    // Comprobar si la ventana que contiene la tabla está abierta
+    if (window.opener && !window.opener.closed) {
+        // Insertar la nueva fila en la tabla de usuarios en la página principal
+        window.opener.document.getElementById('usuarios-body').insertAdjacentHTML('beforeend', nuevaFila);
+    }
 
-    const usuariosList = JSON.parse(localStorage.getItem('tablaUsuarios')) || [];
-    usuariosList.push({
-        nombre,
-        apellidos,
-        email,
-        fechaNacimiento,
-        pais,
-        ciudad
-    });
+    // Limpiar el formulario después de añadir el usuario
+    document.querySelector('form').reset();
 
-    // Guardar los usuarios en el localStorage
-    localStorage.setItem('tablaUsuarios', JSON.stringify(usuariosList));
-
-    // Redirigir al listado de usuarios o mostrar el nuevo usuario en la misma página
-    window.location.href = 'tables.html';
+    // Mostrar una alerta de éxito y redirigir
+    alert('Usuario añadido con éxito');
+    window.location.href = 'index.html'; // Volver a la página de usuarios
 });
