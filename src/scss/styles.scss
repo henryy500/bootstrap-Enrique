@@ -793,6 +793,7 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
 .imagen-fondoPublicacion2{
   background-image: url('../assets/imagenfondopublicacion2.avif');
   background-size:cover;
+  background-attachment: fixed;
   width:100%;
   height:auto;
 }
