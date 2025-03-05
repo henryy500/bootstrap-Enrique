@@ -22509,6 +22509,13 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
   font-size: 24px;
 }
 
+.imagen-fondoPublicacion2 {
+  background-image: url("../assets/imagenfondopublicacion2.avif");
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
 .menu-icono {
   background-color: #fce1e1;
 }

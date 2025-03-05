@@ -790,9 +790,14 @@ $nuevo-color-generado-seccion3: generate-color(45, 100%, 60%);
 $primary-color: #33cc99; // Un tono de verde fresco
 $nuevo-color-seccion4: generate-color(51, 153, 255);
 
+.imagen-fondoPublicacion2{
+  background-image: url('../assets/imagenfondopublicacion2.avif');
+  background-size:cover;
+  width:100%;
+  height:auto;
+}
 //Establecemos fondo de color del menu de navegacion
 .menu-icono{
-  
   background-color: map-get($color-MenuNavegacion,primary);
   
 }
