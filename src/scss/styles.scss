@@ -628,6 +628,7 @@ $margin-bottom: 2em;
 // Definimos algunas variables de color
 $primary-color: #0d6efd;
 $secondary-color: #6c757d;
+$color-hover-menu1:orange;
 $light-color-nav-link1: #f8f9fa;
 $dark-color: #212529;
 $card-tarjeta-publicacion1: #ffffff;
@@ -643,19 +644,9 @@ body {
 // Encabezado
 header {
   background-color: $primary-color;
-  .menu-navegacion {
-    
-  .nav {
+  .menu-navegacion1 ul li a:hover {
+    background-color:$color-hover-menu1;
   
-    .nav-link {
-
-    color: $light-color-nav-link1;
-
-      &.nav-link:hover {
-          color: #ffcc00;
-        }
-        }
-     }
   }
 }
 
@@ -768,6 +759,7 @@ header {
 //Estilos para la segunda publicacion
 //Variables que vamos a necesitar para esta segunda publicacion
 $color-MenuNavegacion:(primary: #fce1e1);
+$color-hover-menu2:(green);
 $color-masInformacion:(primary:black);
 $color-enlaces-footer:orange;
 $color-textoPropiedades: #555;
@@ -802,6 +794,11 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
 .menu-icono{
   background-color: map-get($color-MenuNavegacion,primary);
   
+}
+
+.menu-icono-publicacion2 nav a:hover{
+  background-color:$color-hover-menu2;
+  transform:scale(0.8);
 }
 
 .imagen-iconoPublicacion2{
