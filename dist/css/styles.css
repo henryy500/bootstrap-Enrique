@@ -22419,6 +22419,10 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
   color: #ffcc00;
 }
 
+#intro h1, #intro .h1 {
+  font-weight: bold;
+}
+
 .card {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
@@ -22450,6 +22454,14 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
 .btn-light:hover {
   background-color: #212529;
   color: #f8f9fa;
+}
+
+.html-formatoImagenes {
+  width: 100vw;
+  height: auto;
+  background-image: url("../assets/imagenfondopublicacion1.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .imagenJPG {
@@ -22487,6 +22499,14 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
 }
 #conclusion .container {
   text-align: center;
+}
+
+#conclusion h2, #conclusion .h2 {
+  font-weight: bold;
+}
+
+.bi.bi-image {
+  font-size: 24px;
 }
 
 .menu-icono {

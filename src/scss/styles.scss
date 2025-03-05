@@ -659,6 +659,11 @@ header {
   }
 }
 
+//Seccion intro
+#intro h1{
+  font-weight:bold;
+}
+
 // Sección de tarjeta de la publicacion 1
 .card {
   background-color: $card-tarjeta-publicacion1;
@@ -698,7 +703,15 @@ header {
   }
 }
 
-
+//Imagen de fondo
+.html-formatoImagenes{
+  width:100vw;
+  height:auto;
+  background-image:url('../assets/imagenfondopublicacion1.jpeg');
+  background-size:cover;
+  background-attachment: fixed;
+  
+}
 //Imagenes
 .imagenJPG{
  width:200px;
@@ -735,11 +748,23 @@ header {
   background-color: $dark-color;
   color: $light-color-nav-link1;
   padding: 2rem 0;
+ 
   .container {
     text-align: center;
-  }
+
 }
 
+}
+
+#conclusion h2{
+  font-weight:bold;
+}
+
+
+//Icono
+.bi.bi-image{
+  font-size:24px;
+}
 //Estilos para la segunda publicacion
 //Variables que vamos a necesitar para esta segunda publicacion
 $color-MenuNavegacion:(primary: #fce1e1);
