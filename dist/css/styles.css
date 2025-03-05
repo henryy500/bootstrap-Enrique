@@ -22452,39 +22452,30 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
   color: #f8f9fa;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
 .imagenJPG {
-  width: 30vw;
-  min-width: 350px;
-  height: 30vh;
+  width: 200px;
+  height: 200px;
   background-image: url("../assets/images.jpeg");
   background-size: cover;
 }
 
 .imagenGif {
   width: 30vw;
-  min-width: 350px;
-  height: 30vh;
+  height: 50vh;
   background-image: url("../assets/formatogif.jpeg");
   background-size: cover;
 }
 
 .imagenPng {
-  width: 30vw;
-  min-width: 350px;
-  height: 30vh;
+  width: 50vw;
+  height: 50vh;
   background-image: url("../assets/imagenpng.png");
   background-size: cover;
 }
 
 .imagenWebp {
-  width: 30vw;
-  min-width: 350px;
-  height: 30vh;
+  width: 50vw;
+  height: 50vh;
   background-image: url("../assets/imagenwebp.webp");
   background-size: cover;
 }
