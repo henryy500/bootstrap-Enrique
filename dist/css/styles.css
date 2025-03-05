@@ -22839,6 +22839,19 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
     height: 100vh;
     padding: 20px;
   }
+  .menu-navegacion3.open nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #6666ff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+  }
   .menu-hamburguesa.open .line:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
     transition: transform 0.3s ease-in-out;
@@ -22873,11 +22886,21 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
     padding: 20px;
     text-align: center;
   }
+  .menu-icono.open nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #6666ff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
 }
 @media (max-width: 400px) {
-  .menu-hamburguesa {
-    display: block; /* Mostrar icono hamburguesa */
-  }
   .menu-navegacion1 nav {
     display: none;
   }
@@ -22888,6 +22911,20 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
     justify-content: center;
     background-color: #666666;
     position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    z-index: 2;
+  }
+  .menu-navegacion1.open nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #666666;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;

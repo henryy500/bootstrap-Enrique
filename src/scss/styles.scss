@@ -1202,6 +1202,21 @@ $padding-secciones:40px;
 
   }
 
+  .menu-navegacion3.open nav ul{
+    display: flex; 
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    background-color: lighten(blue,20%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height:100vh;
+    padding: 20px;
+
+  }
+
   // Efecto de las líneas de la hamburguesa que se transforman en una cruz cuando le pulsas a las tres barritas
   .menu-hamburguesa.open .line:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
@@ -1246,17 +1261,25 @@ $padding-secciones:40px;
     text-align:center;
   }  
 
+  .menu-icono.open nav ul{
+    display: flex; 
+    flex-direction: column;
+    justify-content:center;
+    background-color: lighten(blue,20%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height:100vh;
+    padding: 20px;
+    text-align:center;
+  }  
+
  
 }
 
 // Media Query para pantallas menores a 400px
 @media (max-width: 400px) {
-
-  // Mostrar el ícono de hamburguesa
-  .menu-hamburguesa {
-    display: block; /* Mostrar icono hamburguesa */
-  }
-
 
   // Inicialmente ocultar el menú
   .menu-navegacion1 nav{
@@ -1280,6 +1303,23 @@ $padding-secciones:40px;
     z-index:2;
     
   }
+
+  .menu-navegacion1.open nav ul{
+    display: flex; 
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    background-color: lighten(black,40%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height:100vh;
+    padding: 20px;
+    z-index:2;
+    
+  }
+
 
 
 }
