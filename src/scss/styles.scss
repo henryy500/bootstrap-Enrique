@@ -1258,13 +1258,13 @@ $padding-secciones:40px;
   }
 
   // Inicialmente ocultar el menú
-  .menu-navegacion ul {
+  .menu-navegacion1 nav {
     display: none;
     
   }
 
   // Mostrar el menú cuando se activa la clase "open"
-  .menu-navegacion.open nav ul{
+  .menu-navegacion1.open nav{
     display: flex; 
     flex-direction: column;
     align-items:center;
@@ -1276,18 +1276,9 @@ $padding-secciones:40px;
     width: 100%;
     height:100vh;
     padding: 20px;
+    z-index:2;
     
   }
 
-  // Ajustar los elementos de la lista dentro del menú
-  .menu-navegacion.open ul li {
-    margin: 15px 0;
-  }
 
-  .menu-navegacion.open ul li a {
-    padding: 20px;
-    font-size: 18px;
-    text-align: center;
-    width: 100%;
-  }
 }
