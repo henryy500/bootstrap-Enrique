@@ -766,6 +766,7 @@ $color-textoPropiedades: #555;
 $colorTitulos: black; 
 $paddingMenuNavegacion2:20px 20px;
 
+
 //Función específica para la tercera seccion
 @function generate-color($hue, $saturation, $lightness) {
   @return hsl($hue, $saturation, $lightness);
