@@ -796,6 +796,7 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
   width:100%;
   height:auto;
 }
+
 //Establecemos fondo de color del menu de navegacion
 .menu-icono{
   background-color: map-get($color-MenuNavegacion,primary);
@@ -836,9 +837,6 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
     font-weight: bold;
   }
 
- 
-  
-
   // Estilos generales para las cajas internas (background1, background2, etc.)
   .tipos-background .background1, .tipos-background .background2, .tipos-background .background3, .tipos-background .background4 {
     width: 100%;
@@ -868,6 +866,10 @@ $nuevo-color-seccion4: generate-color(51, 153, 255);
   width:100%;
   background: linear-gradient(135deg, $primary-color, $nuevo-color-seccion4);
   padding:4em;
+
+  &.titulo-propiedades-objects h2{
+    font-weight:bold;
+  }
   
 }
 .objects-cajas .object-fit h3, .objects-cajas .object-position h3 {

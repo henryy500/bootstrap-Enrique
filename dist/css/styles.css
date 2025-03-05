@@ -22571,6 +22571,9 @@ header .menu-navegacion .nav .nav-link.nav-link:hover {
   background: linear-gradient(135deg, #33cc99, rgb(51, 153, 255));
   padding: 4em;
 }
+.titulo-propiedades-objects.titulo-propiedades-objects h2, .titulo-propiedades-objects.titulo-propiedades-objects .h2 {
+  font-weight: bold;
+}
 
 .objects-cajas .object-fit h3, .objects-cajas .object-fit .h3, .objects-cajas .object-position h3, .objects-cajas .object-position .h3 {
   font-size: 1.2rem;
